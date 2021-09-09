@@ -1,0 +1,814 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images Processing &#8212; My sample book</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Files" href="../6_files/6_files.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_variables_arithmetic/1_variables_arithmetic.html">
+   Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_loops_functions/2_loops_functions.html">
+   Tutorial 3: Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_lists_plotting/3_lists_plotting.html">
+   Tutorial 4: Lists and Plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_strings/4_strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5_arrays/5_arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6_files/6_files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Images Processing
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/7_images/7_images.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F7_images/7_images.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/7_images/7_images.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#more-array-functions">
+   More Array Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#shape-method">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     shape
+    </span>
+   </code>
+   Method
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#axis-methods">
+   Axis Methods
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#images">
+   Images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#particle-tracking">
+   Particle Tracking
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#read-the-image-file">
+     Read the Image File
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#reduce-to-greyscale">
+     Reduce to greyscale
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tresholding">
+     Tresholding
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#blob-location">
+     Blob Location
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="images-processing">
+<h1>Images Processing<a class="headerlink" href="#images-processing" title="Permalink to this headline">¶</a></h1>
+<p>This tutorial will examine how to use Python and Numpy to process images, which can be expressed as 2 or 3 dimensional arrays.</p>
+<div class="section" id="more-array-functions">
+<h2>More Array Functions<a class="headerlink" href="#more-array-functions" title="Permalink to this headline">¶</a></h2>
+<p>First we look at another method of constructing 2d arrays, by constructing one row at a time. Suppose we want to create the following array, where the first row is powers of 2, the second row is powers of 3, and so on:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{matrix}
+1 &amp; 2 &amp; 4 &amp; 8 \\
+1 &amp; 3 &amp; 9 &amp; 27 \\
+1 &amp; 4 &amp; 16 &amp; 64
+\end{matrix}\end{split}\]</div>
+<p>We create a zero array of the desired dimensions using the function <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0. 0. 0. 0.]
+ [0. 0. 0. 0.]
+ [0. 0. 0. 0.]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice the double brackets, which are necessary because the function <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code> takes a tuple as a parameter.</p>
+<p>Next, we create each of the individual rows as 1 x 4 arrays:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">row1</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">row1</span><span class="p">)</span>
+<span class="n">row2</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">**</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">row2</span><span class="p">)</span>
+<span class="n">row3</span> <span class="o">=</span> <span class="mi">4</span> <span class="o">**</span> <span class="n">x</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">row3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 2 4 8]
+[ 1  3  9 27]
+[ 1  4 16 64]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finally, we assign each row to the correct row in <code class="docutils literal notranslate"><span class="pre">a</span></code> using slice notation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">row1</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">1</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">row2</span>
+<span class="n">a</span><span class="p">[</span><span class="mi">2</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">row3</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[ 1.  2.  4.  8.]
+ [ 1.  3.  9. 27.]
+ [ 1.  4. 16. 64.]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="shape-method">
+<h2><code class="docutils literal notranslate"><span class="pre">shape</span></code> Method<a class="headerlink" href="#shape-method" title="Permalink to this headline">¶</a></h2>
+<p>Given an array, we can determine its dimensions using the <code class="docutils literal notranslate"><span class="pre">shape</span></code> method, which returns a tuple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">shape</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;first dimension:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;second dimension:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3, 4)
+first dimension: 3
+second dimension: 4
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="axis-methods">
+<h2>Axis Methods<a class="headerlink" href="#axis-methods" title="Permalink to this headline">¶</a></h2>
+<p>The method <code class="docutils literal notranslate"><span class="pre">np.sum</span></code> allows us to calculate the sum of the elements in an array. If your array is 2-dimensional, it is often useful to calculate the sum in one dimension only, to return a 1-dimensional array. This can be achieved using the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter of the <code class="docutils literal notranslate"><span class="pre">sum</span></code> function:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sum_of_rows</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_rows</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 3.  9. 29. 99.]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This method has performed the vector sum of the rows of <code class="docutils literal notranslate"><span class="pre">a</span></code>, <code class="docutils literal notranslate"><span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">4,</span> <span class="pre">8]</span> <span class="pre">+</span> <span class="pre">[1,</span> <span class="pre">3,</span> <span class="pre">9,</span> <span class="pre">27]</span> <span class="pre">+</span> <span class="pre">[1,</span> <span class="pre">4,</span> <span class="pre">16,</span> <span class="pre">64]</span></code>. Element <code class="docutils literal notranslate"><span class="pre">i</span></code> of the result is the sum down the column <code class="docutils literal notranslate"><span class="pre">i</span></code> of <code class="docutils literal notranslate"><span class="pre">a</span></code>. The parameter <code class="docutils literal notranslate"><span class="pre">axis=0</span></code> determines that it is the 1st (counting from 0) dimension that should be aggregated.</p>
+<p>To perform the aggregation along the second dimension, use <code class="docutils literal notranslate"><span class="pre">axis=1</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sum_of_columns</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sum_of_columns</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[15. 40. 85.]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Other methods that take the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter include <code class="docutils literal notranslate"><span class="pre">np.max</span></code> and <code class="docutils literal notranslate"><span class="pre">np.mean</span></code>.</p>
+</div>
+<div class="section" id="images">
+<h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
+<p>An image file is essentially a 3-dimensional array where each element represents colour intensity of each pixel. The first two dimensions correspond to the x and y co-ordinates of each pixel, and the third dimension corresponds to its RGBA value (R=red, G=Green, B=Blue and A=alpha which encodes transparency).</p>
+<p>The file <code class="docutils literal notranslate"><span class="pre">bw.png</span></code> is an 8 by 8 pixel image:</p>
+<img src="bw_big.png" />
+<p>First we import the module <code class="docutils literal notranslate"><span class="pre">matplotlib.image</span></code> and use the <code class="docutils literal notranslate"><span class="pre">imread</span></code> function to convert it to an array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span> <span class="c1"># import the image module</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;bw.png&quot;</span><span class="p">)</span> <span class="c1"># read the image into an array</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;shape:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_607</span><span class="o">/</span><span class="mf">2294064824.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span> <span class="c1"># import the image module</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">x</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;bw.png&quot;</span><span class="p">)</span> <span class="c1"># read the image into an array</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> 
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;shape:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/matplotlib/image.py</span> in <span class="ni">imread</span><span class="nt">(fname, format)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1499</span>                     <span class="n">response</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="g g-Whitespace">   </span><span class="mi">1500</span>                 <span class="k">return</span> <span class="n">imread</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">ext</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1501</span>     <span class="k">with</span> <span class="n">img_open</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">image</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1502</span>         <span class="k">return</span> <span class="p">(</span><span class="n">_pil_png_to_float_array</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1503</span>                 <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">PIL</span><span class="o">.</span><span class="n">PngImagePlugin</span><span class="o">.</span><span class="n">PngImageFile</span><span class="p">)</span> <span class="k">else</span>
+
+<span class="nn">/usr/local/lib/python3.8/dist-packages/PIL/ImageFile.py</span> in <span class="ni">__init__</span><span class="nt">(self, fp, filename)</span>
+<span class="g g-Whitespace">    </span><span class="mi">107</span>         <span class="k">if</span> <span class="n">isPath</span><span class="p">(</span><span class="n">fp</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">108</span>             <span class="c1"># filename</span>
+<span class="ne">--&gt; </span><span class="mi">109</span>             <span class="bp">self</span><span class="o">.</span><span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span>             <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">fp</span>
+<span class="g g-Whitespace">    </span><span class="mi">111</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_exclusive_fp</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;bw.png&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is a three dimensional array where <code class="docutils literal notranslate"><span class="pre">x[i,j,0]</span></code> is the R value, <code class="docutils literal notranslate"><span class="pre">x[i,j,1]</span></code> is the G value, <code class="docutils literal notranslate"><span class="pre">x[i,j,2]</span></code> is the B value and <code class="docutils literal notranslate"><span class="pre">x[i,j,3]</span></code> is the alpha (transparency) value. <code class="docutils literal notranslate"><span class="pre">x[0,</span> <span class="pre">0,</span> <span class="pre">:]</span></code> extracts all four values for the (0, 0) pixel as a 1 x 4 array:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="p">:])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.02352941 0.02352941 0.02352941 1.        ]
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is a greyscale image, so all the colour values are identical and the alpha value is 1 (100% opaque). We can aggregate along the third (number 2) axis to sum the colour values and return a 2-dimensional array. (The round function is used to make the printed array easier to read by reducing the number of decimal places displayed).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1.1 1.4 1.1 1.5 1.3 1.  1.2 1.1]
+ [1.5 1.8 2.  2.1 1.8 1.2 1.2 1.1]
+ [1.8 2.4 3.  3.2 2.3 1.7 1.4 1.2]
+ [1.9 3.1 3.6 3.6 3.3 1.8 1.3 1.3]
+ [2.  3.2 3.6 3.7 3.  2.  1.7 1.2]
+ [1.8 2.3 3.  3.1 2.4 2.3 2.5 1.7]
+ [1.4 1.9 2.  1.9 1.8 2.4 4.  2.3]
+ [1.1 1.4 1.2 1.1 1.2 1.6 1.9 1.5]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="particle-tracking">
+<h2>Particle Tracking<a class="headerlink" href="#particle-tracking" title="Permalink to this headline">¶</a></h2>
+<p>Many scientific experiments require the capture of mages, for example  microscopic images of biological tissue slices, or photographs of astronomical objects images. Computers enable us to automate many of the processes associated with analysing such images, such as the automatic segmentation and labelling of cells in a tissue slice or identification of astronomical objects.</p>
+<p>We will be using Python image processing techniques to reproduce part of a famous experiment: Perrin’s experiment to measure Avogadro’s Number. In this experiment, images of tiny particles are recorded through a microscope.</p>
+<p>This lesson is based in part on <a class="reference external" href="https://introcs.cs.princeton.edu/java/assignments/atomic.html">an assignment from Princeton University</a> and you are encouraged to read it for reference.</p>
+<ol class="simple">
+<li><p>Read in an image file and convert it to a <code class="docutils literal notranslate"><span class="pre">numpy</span></code> array.</p></li>
+<li><p>Convert the array to greyscale by averaging along the last dimension</p></li>
+<li><p>Classify the pixels as foreground or background</p></li>
+<li><p>Find the particle locations</p></li>
+<li><p>Repeat for all images and plot a graph of particle location against time</p></li>
+</ol>
+<div class="section" id="read-the-image-file">
+<h3>Read the Image File<a class="headerlink" href="#read-the-image-file" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span> <span class="c1"># import the image module</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;bw.png&quot;</span><span class="p">)</span> <span class="c1"># read the image into an array</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f1b93dcce50&gt;
+</pre></div>
+</div>
+<img alt="../_images/7_images_22_1.png" src="../_images/7_images_22_1.png" />
+</div>
+</div>
+</div>
+<div class="section" id="reduce-to-greyscale">
+<h3>Reduce to greyscale<a class="headerlink" href="#reduce-to-greyscale" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dimensions:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dimensions: (8, 8, 4)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We will reduce the array to 2-dimensions by summing the last dimension:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="c1"># sum the RGBA values for each pixel</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">z</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1.1 1.4 1.1 1.5 1.3 1.  1.2 1.1]
+ [1.5 1.8 2.  2.1 1.8 1.2 1.2 1.1]
+ [1.8 2.4 3.  3.2 2.3 1.7 1.4 1.2]
+ [1.9 3.1 3.6 3.6 3.3 1.8 1.3 1.3]
+ [2.  3.2 3.6 3.7 3.  2.  1.7 1.2]
+ [1.8 2.3 3.  3.1 2.4 2.3 2.5 1.7]
+ [1.4 1.9 2.  1.9 1.8 2.4 4.  2.3]
+ [1.1 1.4 1.2 1.1 1.2 1.6 1.9 1.5]]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tresholding">
+<h3>Tresholding<a class="headerlink" href="#tresholding" title="Permalink to this headline">¶</a></h3>
+<p>The next step is to classify each pixel as ‘foreground’ (belonging to a particle) or ‘background’. We do this by setting each pixel to 1 if it is above a threshold value, and 0 otherwise. But what threshold value should we choose? It certainly must lie between the minimum and maximum values of the array.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Min:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Max:&quot;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Min: 1.0
+Max: 4.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>The threshold must lie between 1 and 4. Let’s try a value of 2.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thres</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">x_thres</span> <span class="o">=</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="n">thres</span> <span class="c1"># Determine pixels which are above the threshold</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_thres</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x_thres</span><span class="p">)</span> <span class="c1"># Note that in Python True = 1 and False = 0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[False False False False False False False False]
+ [False False  True  True False False False False]
+ [False  True  True  True  True False False False]
+ [False  True  True  True  True False False False]
+ [ True  True  True  True  True False False False]
+ [False  True  True  True  True  True  True False]
+ [False False False False False  True  True  True]
+ [False False False False False False False False]]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f1b91d30610&gt;
+</pre></div>
+</div>
+<img alt="../_images/7_images_30_2.png" src="../_images/7_images_30_2.png" />
+</div>
+</div>
+<p>We would like to identify the largest blob (the top left one). We will increase the value of <code class="docutils literal notranslate"><span class="pre">thres</span></code> so that there are two distinct blobs in the thresholded image.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">thres</span> <span class="o">=</span> <span class="mf">2.5</span>
+<span class="n">x_thres</span> <span class="o">=</span> <span class="n">z</span> <span class="o">&gt;</span> <span class="n">thres</span> <span class="c1"># Determine pixels which are above the threshold</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_thres</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x_thres</span><span class="p">)</span> <span class="c1"># Note that in Python True = 1 and False = 0</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[False False False False False False False False]
+ [False False False False False False False False]
+ [False False  True  True False False False False]
+ [False  True  True  True  True False False False]
+ [False  True  True  True  True False False False]
+ [False False  True  True False False False False]
+ [False False False False False False  True False]
+ [False False False False False False False False]]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f1b91d13640&gt;
+</pre></div>
+</div>
+<img alt="../_images/7_images_32_2.png" src="../_images/7_images_32_2.png" />
+</div>
+</div>
+</div>
+<div class="section" id="blob-location">
+<h3>Blob Location<a class="headerlink" href="#blob-location" title="Permalink to this headline">¶</a></h3>
+<p>The next step is the determine the location of the largest identified blob. Fortunately there are functions available in the <code class="docutils literal notranslate"><span class="pre">scipy.ndimage</span></code> package which do just that. First, use the function <code class="docutils literal notranslate"><span class="pre">label</span></code> to generate an array in which  each element is a number identifying which connected blob the pixel belongs to. In this case, there are two blobs, so every pixel is labelled 1 or 2 if it belongs to one of the blobs, or 0 if it belongs to neither.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">scipy.ndimage</span> <span class="k">as</span> <span class="nn">sn</span> <span class="c1"># import the scipy.ndimage package</span>
+<span class="n">x_labels</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">sn</span><span class="o">.</span><span class="n">label</span><span class="p">(</span><span class="n">x_thres</span><span class="p">)</span> <span class="c1"># generate </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;number of blobs:&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x_labels</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>number of blobs: 2
+[[0 0 0 0 0 0 0 0]
+ [0 0 0 0 0 0 0 0]
+ [0 0 1 1 0 0 0 0]
+ [0 1 1 1 1 0 0 0]
+ [0 1 1 1 1 0 0 0]
+ [0 0 1 1 0 0 0 0]
+ [0 0 0 0 0 0 2 0]
+ [0 0 0 0 0 0 0 0]]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Next, use the <code class="docutils literal notranslate"><span class="pre">sn.sum</span></code> function to generate an array containing the size (in number of pixels) of each blob.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">sizes</span> <span class="o">=</span> <span class="n">sn</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">x_thres</span><span class="p">,</span> <span class="n">x_labels</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;sizes:&quot;</span><span class="p">,</span> <span class="n">sizes</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>sizes: [12.  1.]
+</pre></div>
+</div>
+</div>
+</div>
+<p>So blob 1 has 9 pixels and blob 2 has 1 pixel.
+<code class="docutils literal notranslate"><span class="pre">np.argmax</span></code> returns the index of the largest blob:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">argmax</span><span class="p">(</span><span class="n">sizes</span><span class="p">)</span> <span class="c1"># get the index of the largest blob</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;index:&quot;</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>index: 0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the indexes of the <code class="docutils literal notranslate"><span class="pre">sizes</span></code> array are counted from 0 to n-1, whereas the labels are counted from 1 to n, so index <code class="docutils literal notranslate"><span class="pre">idx</span></code> corresponds to the blob with label <code class="docutils literal notranslate"><span class="pre">idx</span> <span class="pre">+</span> <span class="pre">1</span></code>.<br />
+Next we determine the location of the largest blob using the <code class="docutils literal notranslate"><span class="pre">sn.center_of_mass</span></code> function, which returns the co-ordinates of the centre of a blob.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">location</span> <span class="o">=</span> <span class="n">sn</span><span class="o">.</span><span class="n">center_of_mass</span><span class="p">(</span><span class="n">x_thres</span><span class="p">,</span> <span class="n">x_labels</span><span class="p">,</span> <span class="n">idx</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># determine the coordinates of the largest blob</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;location:&quot;</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>location: (3.5, 2.5)
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>NOTE</strong><br />
+The <code class="docutils literal notranslate"><span class="pre">location</span></code> variable is a <code class="docutils literal notranslate"><span class="pre">tuple</span></code>. A tuple is the same as a list, and we use the same square bracket notation to access elements, such as <code class="docutils literal notranslate"><span class="pre">location[0]</span></code>. But:</p>
+<ul class="simple">
+<li><p>When defining a tuple we use round brackets <code class="docutils literal notranslate"><span class="pre">()</span></code> instead of square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>. <code class="docutils literal notranslate"><span class="pre">location</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">4)</span></code></p></li>
+<li><p>A tuple is <strong>immutable</strong>, meaning its elements cannot be changed. <code class="docutils literal notranslate"><span class="pre">location[0]</span> <span class="pre">=</span> <span class="pre">5</span></code> results in an error</p></li>
+</ul>
+<hr class="docutils" />
+<p>Finally we will mark the location of the centre of the largest blob using <code class="docutils literal notranslate"><span class="pre">plt.scatter</span></code>. Arrays indices are ordered <em>row</em> then <em>column</em> which is opposite to x-y ordering for the scatter plot, so we have to reverse the ordering of the <code class="docutils literal notranslate"><span class="pre">location</span></code> elements when plotting.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="c1"># arrays are indexed [column, row] whereas scatter plots are ordered [x, y]</span>
+<span class="c1"># so we need to reverse the order of the indices</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">location</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">location</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f1b84306c70&gt;
+</pre></div>
+</div>
+<img alt="../_images/7_images_43_1.png" src="../_images/7_images_43_1.png" />
+</div>
+</div>
+<p>In this week’s exercises you will repeat this procedure using a sequence of real experimental images of particles exhibiting Brownian motion.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./7_images"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../6_files/6_files.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Files</p>
+            </div>
+        </a>
+    </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
