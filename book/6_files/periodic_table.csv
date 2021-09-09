@@ -1,0 +1,123 @@
+number,name,symbol,appearance,atomic_number,melting_point,boiling_point
+1,Hydrogen,H,colorless gas,1,13.99,20.271
+2,Helium,He,"colorless gas, exhibiting a red-orange glow when placed in a high-voltage electric field",2,0.95,4.222
+3,Lithium,Li,silvery-white,3,453.65,1603
+4,Beryllium,Be,white-gray metallic,4,1560,2742
+5,Boron,B,black-brown,5,2349,4200
+6,Carbon,C,"graphite: black, diamond: clear",6,,
+7,Nitrogen,N,"colorless gas, liquid or solid",7,63.15,77.355
+8,Oxygen,O,"gas: colorless, liquid: pale blue",8,54.36,90.188
+9,Fluorine,F,"gas: very pale yellow
+liquid: bright yellow
+solid: alpha is opaque, beta is transparent",9,53.48,85.03
+10,Neon,Ne,colorless gas exhibiting an orange-red glow when placed in a high voltage electric field,10,24.56,27.104
+11,Sodium,Na,silvery white metallic,11,370.944,1156.09
+12,Magnesium,Mg,shiny grey solid,12,923,1363
+13,Aluminum,Al,silvery gray metallic,13,933.47,2743
+14,Silicon,Si,"crystalline, reflective with bluish-tinged faces",14,1687,3538
+15,Phosphorus,P,"colourless, waxy white, yellow, scarlet, red, violet, black",15,,
+16,Sulfur,S,lemon yellow sintered microcrystals,16,388.36,717.8
+17,Chlorine,Cl,pale yellow-green gas,17,171.6,239.11
+18,Argon,Ar,colorless gas exhibiting a lilac/violet glow when placed in a high voltage electric field,18,83.81,87.302
+19,Potassium,K,silvery gray,19,336.7,1032
+20,Calcium,Ca,"dull gray, silver; with a pale yellow tint",20,1115,1757
+21,Scandium,Sc,silvery white,21,1814,3109
+22,Titanium,Ti,silvery grey-white metallic,22,1941,3560
+23,Vanadium,V,blue-silver-grey metal,23,2183,3680
+24,Chromium,Cr,silvery metallic,24,2180,2944
+25,Manganese,Mn,silvery metallic,25,1519,2334
+26,Iron,Fe,lustrous metallic with a grayish tinge,26,1811,3134
+27,Cobalt,Co,hard lustrous bluish gray metal,27,1768,3200
+28,Nickel,Ni,"lustrous, metallic, and silver with a gold tinge",28,1728,3003
+29,Copper,Cu,red-orange metallic luster,29,1357.77,2835
+30,Zinc,Zn,silver-gray,30,692.68,1180
+31,Gallium,Ga,silvery blue,31,302.9146,2673
+32,Germanium,Ge,grayish-white,32,1211.4,3106
+33,Arsenic,As,metallic grey,33,,
+34,Selenium,Se,"black, red, and gray (not pictured) allotropes",34,494,958
+35,Bromine,Br,reddish-brown,35,265.8,332
+36,Krypton,Kr,"colorless gas, exhibiting a whitish glow in a high electric field",36,115.78,119.93
+37,Rubidium,Rb,grey white,37,312.45,961
+38,Strontium,Sr,silvery white metallic; with a pale yellow tint,38,1050,1650
+39,Yttrium,Y,silvery white,39,1799,3203
+40,Zirconium,Zr,silvery white,40,2128,4650
+41,Niobium,Nb,"gray metallic, bluish when oxidized",41,2750,5017
+42,Molybdenum,Mo,gray metallic,42,2896,4912
+43,Technetium,Tc,shiny gray metal,43,2430,4538
+44,Ruthenium,Ru,silvery white metallic,44,2607,4423
+45,Rhodium,Rh,silvery white metallic,45,2237,3968
+46,Palladium,Pd,silvery white,46,1828.05,3236
+47,Silver,Ag,lustrous white metal,47,1234.93,2435
+48,Cadmium,Cd,silvery bluish-gray metallic,48,594.22,1040
+49,Indium,In,silvery lustrous gray,49,429.7485,2345
+50,Tin,Sn,"silvery-white (beta, ?) or gray (alpha, ?)",50,505.08,2875
+51,Antimony,Sb,silvery lustrous gray,51,903.78,1908
+52,Tellurium,Te,"silvery lustrous gray (crystalline),, brown-black powder (amorphous)",52,722.66,1261
+53,Iodine,I,"lustrous metallic gray, violet as a gas",53,386.85,457.4
+54,Xenon,Xe,"colorless gas, exhibiting a blue glow when placed in a high voltage electric field",54,161.4,165.051
+55,Cesium,Cs,pale gold,55,301.7,944
+56,Barium,Ba,silvery gray; with a pale yellow tint,56,1000,2118
+57,Lanthanum,La,silvery white,57,1193,3737
+58,Cerium,Ce,silvery white,58,1068,3716
+59,Praseodymium,Pr,grayish white,59,1208,3403
+60,Neodymium,Nd,silvery white,60,1297,3347
+61,Promethium,Pm,metallic,61,1315,3273
+62,Samarium,Sm,silvery white,62,1345,2173
+63,Europium,Eu,"silvery white, with a pale yellow tint; but rarely seen without oxide discoloration",63,1099,1802
+64,Gadolinium,Gd,silvery white,64,1585,3273
+65,Terbium,Tb,silvery white,65,1629,3396
+66,Dysprosium,Dy,silvery white,66,1680,2840
+67,Holmium,Ho,silvery white,67,1734,2873
+68,Erbium,Er,silvery white,68,1802,3141
+69,Thulium,Tm,silvery gray,69,1818,2223
+70,Ytterbium,Yb,silvery white; with a pale yellow tint,70,1097,1469
+71,Lutetium,Lu,silvery white,71,1925,3675
+72,Hafnium,Hf,steel gray,72,2506,4876
+73,Tantalum,Ta,gray blue,73,3290,5731
+74,Tungsten,W,"grayish white, lustrous",74,3695,6203
+75,Rhenium,Re,silvery-grayish,75,3459,5903
+76,Osmium,Os,"silvery, blue cast",76,3306,5285
+77,Iridium,Ir,silvery white,77,2719,4403
+78,Platinum,Pt,silvery white,78,2041.4,4098
+79,Gold,Au,metallic yellow,79,1337.33,3243
+80,Mercury,Hg,silvery,80,234.321,629.88
+81,Thallium,Tl,silvery white,81,577,1746
+82,Lead,Pb,metallic gray,82,600.61,2022
+83,Bismuth,Bi,lustrous brownish silver,83,544.7,1837
+84,Polonium,Po,silvery,84,527,1235
+85,Astatine,At,"unknown, probably metallic",85,575,610
+86,Radon,Rn,"colorless gas, occasionally glows green or red in discharge tubes",86,202,211.5
+87,Francium,Fr,,87,"? 300 K (30 �C, 80 �F)","? 950 K (680 �C, 1300 �F)"
+88,Radium,Ra,silvery white metallic,88,973,2010
+89,Actinium,Ac,"silvery-white, glowing with an eerie blue light; sometimes with a golden cast",89,1500,"3500�300 K (3200�300 �C, 5800�500 �F) (extrapolated)"
+90,Thorium,Th,"silvery, often with black tarnish",90,2023,5061
+91,Protactinium,Pa,"bright, silvery metallic luster",91,1841,4300
+92,Uranium,U,silvery gray metallic; corrodes to a spalling black oxide coat in air,92,1405.3,4404
+93,Neptunium,Np,silvery metallic,93,"912�3 K (639�3 �C, 1182�5 �F)",4447
+94,Plutonium,Pu,"silvery white, tarnishing to dark gray in air",94,912.5,3505
+95,Americium,Am,silvery white,95,1449,2880
+96,Curium,Cm,"silvery metallic, glows purple in the dark",96,1613,3383
+97,Berkelium,Bk,silvery,97,"beta: 1259 K (986 �C, 1807 �F)","beta: 2900 K (2627 �C, 4760 �F)"
+98,Californium,Cf,silvery,98,1173,1743
+99,Einsteinium,Es,silvery; glows blue in the dark,99,1133,1269
+100,Fermium,Fm,,100,1800,
+101,Mendelevium,Md,,101,1100,
+102,Nobelium,No,,102,1100,
+103,Lawrencium,Lr,silvery (predicted),103,1900,
+105,Dubnium,Db,,105,,
+106,Seaborgium,Sg,,106,,
+107,Bohrium,Bh,,107,,
+108,Hassium,Hs,silvery (predicted),108,,
+109,Meitnerium,Mt,,109,,
+110,Darmstadtium,Ds,,110,,
+111,Roentgenium,Rg,silvery (predicted),111,,
+112,Ununbium,Uub,,112,,"357+112
+?108 K (84+112
+?108 �C, 183+202
+?194 �F)"
+113,Ununtrium,Uut,,113,700,1430
+114,Ununquadium,Uuq,,114,340,420
+115,Ununpentium,Uup,,115,670,"~1400 K (~1100 �C, ~2000 �F) (predicted)"
+116,Ununhexium,Uuh,,116,"637�780 K (364�507 �C, 687�944 �F) (extrapolated)","1035�1135 K (762�862 �C, 1403�1583 �F) (extrapolated)"
+117,Ununseptium,Uus,semimetallic (predicted),117,"623�823 K (350�550 �C, 662�1022 �F) (predicted)",883
+118,Ununoctium,Uuo,,118,,"350�30 K (80�30 �C, 170�50 �F) (extrapolated)"

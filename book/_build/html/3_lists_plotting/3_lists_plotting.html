@@ -1,0 +1,596 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial 4: Lists and Plotting &#8212; My sample book</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Strings" href="../4_strings/4_strings.html" />
+    <link rel="prev" title="Tutorial 3: Loops" href="../2_loops_functions/2_loops_functions.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_variables_arithmetic/1_variables_arithmetic.html">
+   Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_loops_functions/2_loops_functions.html">
+   Tutorial 3: Loops
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Tutorial 4: Lists and Plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_strings/4_strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5_arrays/5_arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6_files/6_files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_images/7_images.html">
+   Images Processing
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/3_lists_plotting/3_lists_plotting.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F3_lists_plotting/3_lists_plotting.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/3_lists_plotting/3_lists_plotting.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lists">
+   Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#traversing-lists">
+   Traversing Lists
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#appending-elements-to-a-list">
+   Appending Elements to a List
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#finding-a-list-element">
+   Finding a List Element
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#plotting-using-matplotlib">
+   Plotting using Matplotlib
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="tutorial-4-lists-and-plotting">
+<h1>Tutorial 4: Lists and Plotting<a class="headerlink" href="#tutorial-4-lists-and-plotting" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="lists">
+<h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>list</strong> is a Python data type that stores a sequence of values. For example, suppose we have the following data representing five years’ population data for a species:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">populations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">206</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[12, 25, 54, 102, 206]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Each element in a list has an <strong>index</strong> which identifies its position. We can access a list element by following the variable name with square brackets and the index:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">initial_pop</span> <span class="o">=</span> <span class="n">populations</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">year_3_pop</span> <span class="o">=</span> <span class="n">populations</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Initial population:&quot;</span><span class="p">,</span> <span class="n">initial_pop</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Population in year 3:&quot;</span><span class="p">,</span> <span class="n">year_3_pop</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Initial population: 12
+Population in year 3: 102
+</pre></div>
+</div>
+</div>
+</div>
+<p>Likewise, we can update individual list elements. Suppose we would like to change the value of the 3rd element:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">populations</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">100</span> <span class="c1"># Assign the value 100 to element at index 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[12, 25, 54, 100, 206]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Any data type can be stored in a list, including strings:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cities</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Manchester&quot;</span><span class="p">,</span> <span class="s2">&quot;Liverpool&quot;</span><span class="p">,</span> <span class="s2">&quot;Sheffield&quot;</span><span class="p">,</span> <span class="s2">&quot;Stoke-on-Trent&quot;</span><span class="p">]</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">cities</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Sheffield
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>NOTES</strong></p>
+<ul class="simple">
+<li><p>Lists are indexed starting from <code class="docutils literal notranslate"><span class="pre">0</span></code>. If a list has <code class="docutils literal notranslate"><span class="pre">n</span></code> elements, then the last element is at index <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">-</span> <span class="pre">1</span></code>.</p></li>
+<li><p>Square brackets are used for two distinct purposes: for list creation: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">4]</span></code>, and list element access: <code class="docutils literal notranslate"><span class="pre">x[2]</span></code>.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="traversing-lists">
+<h2>Traversing Lists<a class="headerlink" href="#traversing-lists" title="Permalink to this headline">¶</a></h2>
+<p>There are two ways of accessing all elements of a list. The first way is to use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to loop over all index values. We use the Python function <code class="docutils literal notranslate"><span class="pre">len</span></code> to determine the number of elements in the list.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span> <span class="c1"># get the number of elements in the list</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="c1"># loop over index values 0 to n - 1</span>
+    <span class="n">pop</span> <span class="o">=</span> <span class="n">populations</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="c1"># Access element at index i</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;population:&quot;</span><span class="p">,</span> <span class="n">pop</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Year 0 population: 12
+Year 1 population: 25
+Year 2 population: 54
+Year 3 population: 100
+Year 4 population: 206
+</pre></div>
+</div>
+</div>
+</div>
+<p>If you don’t need index values, you can loop over the individual elements of the list:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">pop</span> <span class="ow">in</span> <span class="n">populations</span><span class="p">:</span> <span class="c1"># loop over all elements of the list</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Population:&quot;</span><span class="p">,</span> <span class="n">pop</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Population: 12
+Population: 25
+Population: 54
+Population: 100
+Population: 206
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="appending-elements-to-a-list">
+<h2>Appending Elements to a List<a class="headerlink" href="#appending-elements-to-a-list" title="Permalink to this headline">¶</a></h2>
+<p>After a list is created, we can add items to it using the <code class="docutils literal notranslate"><span class="pre">append</span></code> method. Suppose that we have recorded the species population for the next year as <code class="docutils literal notranslate"><span class="pre">420</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">populations</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">420</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">populations</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[12, 25, 54, 100, 206, 420]
+</pre></div>
+</div>
+</div>
+</div>
+<p>A common pattern for list creation is to start with an empty list, then use a loop to append one element at a time. The following example creates a list of the first 10 square numbers.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">values</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="finding-a-list-element">
+<h2>Finding a List Element<a class="headerlink" href="#finding-a-list-element" title="Permalink to this headline">¶</a></h2>
+<p>If you want to know the index of an element in a list, use the <code class="docutils literal notranslate"><span class="pre">index</span></code> method. <code class="docutils literal notranslate"><span class="pre">string.index(s)</span></code> returns the first element equal to argument <code class="docutils literal notranslate"><span class="pre">s</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;ABC&quot;</span><span class="p">,</span> <span class="s2">&quot;DEF&quot;</span><span class="p">,</span> <span class="s2">&quot;GHI&quot;</span><span class="p">,</span> <span class="s2">&quot;JKL&quot;</span><span class="p">]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="n">values</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;GHI&quot;</span><span class="p">)</span> <span class="c1"># Find the index of the first element equal to &quot;GHI&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="plotting-using-matplotlib">
+<h2>Plotting using Matplotlib<a class="headerlink" href="#plotting-using-matplotlib" title="Permalink to this headline">¶</a></h2>
+<p>Python does not include any in-built graph plotting capability. In order to plot graphs, we have to <strong>import</strong> a Python <strong>package</strong> called <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>. A package is a library of code which we can use to extend the capabilities of core Python, and is composed of individual code files called <strong>modules</strong>. Use the <code class="docutils literal notranslate"><span class="pre">import</span></code> statement to import the module <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>NOTES</strong></p>
+<ul class="simple">
+<li><p>The Python statement <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">a</span></code> causes the Python package (or module) <code class="docutils literal notranslate"><span class="pre">a</span></code> to be imported. Any function defined in <code class="docutils literal notranslate"><span class="pre">a</span></code> is then available by typing ‘<code class="docutils literal notranslate"><span class="pre">a.</span></code>’ followed by the function name.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">a</span> <span class="pre">as</span> <span class="pre">b</span></code> gives <code class="docutils literal notranslate"><span class="pre">a</span></code> an alias (nickname) <code class="docutils literal notranslate"><span class="pre">b</span></code>, so that functions are available by typing ‘<code class="docutils literal notranslate"><span class="pre">b.</span></code>’ followed by the function name. This is useful when <code class="docutils literal notranslate"><span class="pre">a</span></code> has a long name (such as <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>).</p></li>
+<li><p>Python includes built-in modules such as <code class="docutils literal notranslate"><span class="pre">sys</span></code> (system functions) and <code class="docutils literal notranslate"><span class="pre">os</span></code> (operating system functions) which can be imported in the same way.</p></li>
+<li><p>Other packages are not part of Python itself but are pre-installed as part of a Python distribution (such as Anaconda or Cocalc). In this course we will use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p></li>
+<li><p>There are many third-party modules available, which typically need to be downloaded and installed. Examples include <code class="docutils literal notranslate"><span class="pre">biopython</span></code> (for bioinformatics) and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> (for data analysis).</p></li>
+</ul>
+<hr class="docutils" />
+<p>Suppose we have collected the following data which we would like to plot on a line graph.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Time (s)</p></th>
+<th class="head"><p>0.1</p></th>
+<th class="head"><p>0.2</p></th>
+<th class="head"><p>0.3</p></th>
+<th class="head"><p>0.4</p></th>
+<th class="head"><p>0.5</p></th>
+<th class="head"><p>0.6</p></th>
+<th class="head"><p>0.7</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Distance (m)</p></td>
+<td><p>2.5</p></td>
+<td><p>2.6</p></td>
+<td><p>3.4</p></td>
+<td><p>4.1</p></td>
+<td><p>4.5</p></td>
+<td><p>5.1</p></td>
+<td><p>5.2</p></td>
+</tr>
+</tbody>
+</table>
+<p>First, we create lists to store the data for each of the x-axis and y-axis:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">time</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.1</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">,</span> <span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.7</span><span class="p">]</span>
+<span class="n">dis</span> <span class="o">=</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">2.6</span><span class="p">,</span> <span class="mf">3.4</span><span class="p">,</span> <span class="mf">4.1</span><span class="p">,</span> <span class="mf">4.5</span><span class="p">,</span> <span class="mf">5.1</span><span class="p">,</span> <span class="mf">5.2</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Then:</p>
+<ul class="simple">
+<li><p>create a figure using the function <code class="docutils literal notranslate"><span class="pre">plt.figure</span></code>, passing in the dimensions in inches.</p></li>
+<li><p>plot a line graph using <code class="docutils literal notranslate"><span class="pre">plt.plot</span></code>, passing in the two lists</p></li>
+<li><p>add axis labels and a title using <code class="docutils literal notranslate"><span class="pre">plt.xlabel</span></code>, <code class="docutils literal notranslate"><span class="pre">plt.ylabel</span></code> and <code class="docutils literal notranslate"><span class="pre">plt.title</span></code></p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># create figure of size 4 by 4 inches</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># plot a line graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span> <span class="c1"># add an x-axis label</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Distance (m)&quot;</span><span class="p">)</span> <span class="c1"># add a y-axis label</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Particle Position&quot;</span><span class="p">)</span> <span class="c1"># add a figure title</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_495</span><span class="o">/</span><span class="mf">1475974717.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># create figure of size 4 by 4 inches</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># plot a line graph</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span> <span class="c1"># add an x-axis label</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Distance (m)&quot;</span><span class="p">)</span> <span class="c1"># add a y-axis label</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Particle Position&quot;</span><span class="p">)</span> <span class="c1"># add a figure title</span>
+
+<span class="ne">NameError</span>: name &#39;y&#39; is not defined
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 288x288 with 0 Axes&gt;
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./3_lists_plotting"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../2_loops_functions/2_loops_functions.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Tutorial 3: Loops</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../4_strings/4_strings.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Strings</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

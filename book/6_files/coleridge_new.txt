@@ -1,0 +1,11 @@
+Line 1: In Xanadu did Kubla Khan
+Line 2: A stately pleasure-dome decree:
+Line 3: Where Alph, the sacred river, ran
+Line 4: Through caverns measureless to man
+Line 5: Down to a sunless sea.
+Line 6: So twice five miles of fertile ground
+Line 7: With walls and towers were girdled round;
+Line 8: And there were gardens bright with sinuous rills,
+Line 9: Where blossomed many an incense-bearing tree;
+Line 10: And here were forests ancient as the hills,
+Line 11: Enfolding sunny spots of greenery.

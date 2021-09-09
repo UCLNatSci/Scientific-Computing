@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+chapters:
+- file: 1_variables_arithmetic/1_variables_arithmetic.ipynb
+- file: 2_loops_functions/2_loops_functions.ipynb
+- file: 3_lists_plotting/3_lists_plotting.ipynb
+- file: 4_strings/4_strings.ipynb
+- file: 5_arrays/5_arrays.ipynb
+- file: 6_files/6_files.ipynb
+- file: 7_images/7_images.ipynb

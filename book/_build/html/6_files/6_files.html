@@ -1,0 +1,604 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Files &#8212; My sample book</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Images Processing" href="../7_images/7_images.html" />
+    <link rel="prev" title="Numpy" href="../5_arrays/5_arrays.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">My sample book</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../1_variables_arithmetic/1_variables_arithmetic.html">
+   Introduction to Python
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_loops_functions/2_loops_functions.html">
+   Tutorial 3: Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../3_lists_plotting/3_lists_plotting.html">
+   Tutorial 4: Lists and Plotting
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../4_strings/4_strings.html">
+   Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5_arrays/5_arrays.html">
+   Numpy
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../7_images/7_images.html">
+   Images Processing
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/6_files/6_files.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F6_files/6_files.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/6_files/6_files.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-text-files">
+   Reading Text Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#opening-files">
+   Opening Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reading-files">
+   Reading Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-reading-a-fasta-file">
+   Example: Reading a fasta file
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#writing-files">
+   Writing Files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-editing-a-file">
+   Example: Editing a File
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#csv-files">
+   CSV Files
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="files">
+<h1>Files<a class="headerlink" href="#files" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="reading-text-files">
+<h2>Reading Text Files<a class="headerlink" href="#reading-text-files" title="Permalink to this headline">¶</a></h2>
+<p>A text file contains data consisting of a sequence of characters, with each line terminated by a newline character. Many common files are text files, such as <code class="docutils literal notranslate"><span class="pre">.txt</span></code> files created with a text editor, Python code files, and <code class="docutils literal notranslate"><span class="pre">.fasta</span></code> files which contain DNA sequences.</p>
+<p>The file <code class="docutils literal notranslate"><span class="pre">simple_gene.fasta</span></code> is a text file containing the following data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">AB000263</span> <span class="o">|</span><span class="n">acc</span><span class="o">=</span><span class="n">AB000263</span><span class="o">|</span><span class="n">descr</span><span class="o">=</span><span class="n">Homo</span> <span class="n">sapiens</span> <span class="n">mRNA</span> <span class="k">for</span> <span class="n">prepro</span> <span class="n">cortistatin</span> <span class="n">like</span> <span class="n">peptide</span><span class="p">,</span> <span class="n">complete</span> <span class="n">cds</span><span class="o">.|</span><span class="nb">len</span><span class="o">=</span><span class="mi">368</span>
+<span class="n">TCAATAGTCAGCTGCACTCGAGCGACTCTGAAGGACCTGCCCCCTGTCCGACACCCCAAA</span>
+<span class="n">GAGTCTATTGACCCGGGGACGCGAGTCCTCCGGAAGTGGGAGACGAGACCCATTTCAAGT</span>
+<span class="n">AACCTTGTCTTTCTTTACCTAAATAGACGAGAAGCGCAACTTCTTCATGTTTTACAGTAA</span>
+<span class="n">TTACGATACGTCTTTTAGAATCTCACAGGGTAGACAGACCTCAACTAGTTCCTTGGACAG</span>
+<span class="n">AGGTGTTTCACACTGGTGTATAAAACGTTTAAAACGTACGACTT</span>
+</pre></div>
+</div>
+<p>The idiomatic (and most common) way to read a text file in Python is as follows, which allows us to read the text file one line at a time. The following program opens the file <code class="docutils literal notranslate"><span class="pre">simple_gene.fasta</span></code> and then iterates over each line of text, sequentially reading each line of text into the <code class="docutils literal notranslate"><span class="pre">line</span></code> string variable.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;simple_gene.fasta&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># Open the file and store it in file object f</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># Iterate over each line of text in the file</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="c1"># line is a string variable containing one line of text</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt;AB000263 |acc=AB000263|descr=Homo sapiens mRNA for prepro cortistatin like peptide, complete cds.|len=368
+
+TCAATAGTCAGCTGCACTCGAGCGACTCTGAAGGACCTGCCCCCTGTCCGACACCCCAAA
+
+GAGTCTATTGACCCGGGGACGCGAGTCCTCCGGAAGTGGGAGACGAGACCCATTTCAAGT
+
+AACCTTGTCTTTCTTTACCTAAATAGACGAGAAGCGCAACTTCTTCATGTTTTACAGTAA
+
+TTACGATACGTCTTTTAGAATCTCACAGGGTAGACAGACCTCAACTAGTTCCTTGGACAG
+
+AGGTGTTTCACACTGGTGTATAAAACGTTTAAAACGTACGACTT
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>NOTES</strong></p>
+<ul class="simple">
+<li><p>Python will look for the file in the <strong>same</strong> folder as the <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> file.</p></li>
+<li><p>The file object <code class="docutils literal notranslate"><span class="pre">f</span></code> is available within the indented <code class="docutils literal notranslate"><span class="pre">with</span></code> block</p></li>
+<li><p>There are <strong>two</strong> levels of indentation - one for the <code class="docutils literal notranslate"><span class="pre">with</span></code> statement, and one for the <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">with</span></code> statement ensures that the file is properly closed once the statements within its block are executed.</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="opening-files">
+<h2>Opening Files<a class="headerlink" href="#opening-files" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">open</span></code> function takes two parameters, <code class="docutils literal notranslate"><span class="pre">filename</span></code> and <code class="docutils literal notranslate"><span class="pre">mode</span></code>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">mode</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>There are four different modes for opening a file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">r</span></code> - Read - Default value. Opens a file for reading, raising an error if the file does not exist.<br />
+<code class="docutils literal notranslate"><span class="pre">a</span></code> - Append - Opens a file for appending, creating the file if it does not exist.<br />
+<code class="docutils literal notranslate"><span class="pre">w</span></code> - Write - Opens a file for writing (replacing existing file contents), or creating the file if it does not exist.<br />
+<code class="docutils literal notranslate"><span class="pre">x</span></code> - Create - Creates the specified file, raising an error if the file exists.</p>
+<p>Additionally, we can choose to open the file as binary or text:</p>
+<p><code class="docutils literal notranslate"><span class="pre">t</span></code> - Text - Default value.<br />
+<code class="docutils literal notranslate"><span class="pre">b</span></code> - Binary - Binary mode (e.g. images, raw data)</p>
+<p>For example, to open a file for appending binary data:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">open</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="s2">&quot;ab&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this course we will mainly be using files in text mode, which is most common in practice.</p>
+</div>
+<div class="section" id="reading-files">
+<h2>Reading Files<a class="headerlink" href="#reading-files" title="Permalink to this headline">¶</a></h2>
+<p>To open a file for reading, you can just use <code class="docutils literal notranslate"><span class="pre">open(filename)</span></code> without a <code class="docutils literal notranslate"><span class="pre">mode</span></code> argument, since read mode is the default.</p>
+<p>To read a the entire contents of a file in to string variable, use <code class="docutils literal notranslate"><span class="pre">file.read()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;simple_gene.fasta&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">whole_file</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To read a single line, use <code class="docutils literal notranslate"><span class="pre">file.readline()</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;simple_gene.fasta&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">first_line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+    <span class="n">second_line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>To read one line at a time, use a loop:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;simple_gene.fasta&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">lines</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Or specify the number of characters to read as an argument <code class="docutils literal notranslate"><span class="pre">file.read(n)</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;simple_gene.fasta&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">first_6_chars</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="example-reading-a-fasta-file">
+<h2>Example: Reading a fasta file<a class="headerlink" href="#example-reading-a-fasta-file" title="Permalink to this headline">¶</a></h2>
+<p>A <code class="docutils literal notranslate"><span class="pre">fasta</span></code> file is a popular text-based format for storing DNA sequence data. A sequence in <code class="docutils literal notranslate"><span class="pre">fasta</span></code> format begins with a single-line description, followed by lines of sequence data. The description line is distinguished from the sequence data by a greater-than (“&gt;”) symbol in the first position. Typically all lines of text are shorter than 80 characters in length.</p>
+<p>The following code opens the fasta file and reads its contents into a string variable <code class="docutils literal notranslate"><span class="pre">sequence</span></code>. The line beginning with <code class="docutils literal notranslate"><span class="pre">&gt;</span></code> is discarded, and newline characters are removed using <code class="docutils literal notranslate"><span class="pre">string.strip()</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Open the fasta file containing the DNA sequence</span>
+
+<span class="n">file_name</span> <span class="o">=</span> <span class="s2">&quot;simple_gene.fasta&quot;</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">file_name</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">sequence</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">line</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="s2">&quot;&gt;&quot;</span><span class="p">:</span>
+            <span class="n">sequence</span> <span class="o">=</span> <span class="n">sequence</span> <span class="o">+</span> <span class="n">line</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TCAATAGTCAGCTGCACTCGAGCGACTCTGAAGGACCTGCCCCCTGTCCGACACCCCAAAGAGTCTATTGACCCGGGGACGCGAGTCCTCCGGAAGTGGGAGACGAGACCCATTTCAAGTAACCTTGTCTTTCTTTACCTAAATAGACGAGAAGCGCAACTTCTTCATGTTTTACAGTAATTACGATACGTCTTTTAGAATCTCACAGGGTAGACAGACCTCAACTAGTTCCTTGGACAGAGGTGTTTCACACTGGTGTATAAAACGTTTAAAACGTACGACTT
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="writing-files">
+<h2>Writing Files<a class="headerlink" href="#writing-files" title="Permalink to this headline">¶</a></h2>
+<p>To write to a file, first open the file using one of the three write modes ‘append’, ‘write’ and ‘create’. Then, use <code class="docutils literal notranslate"><span class="pre">file.write(text)</span></code> to write to the file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># open a file for writing, overwriting if it already exists.</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;numbers.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;one</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;two</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>NOTE</strong><br />
+There is no equivalent to <code class="docutils literal notranslate"><span class="pre">file.readline()</span></code> for writing. Instead, use <code class="docutils literal notranslate"><span class="pre">file.write(text</span> <span class="pre">+</span> <span class="pre">&quot;\n&quot;)</span></code> to append a newline character.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="example-editing-a-file">
+<h2>Example: Editing a File<a class="headerlink" href="#example-editing-a-file" title="Permalink to this headline">¶</a></h2>
+<p>For historical and performance reasons, we do not typically edit files directly. Instead, we combine read and write operations to convert an input file into an output file. For example, suppose we would like to add line numbers to a text file <code class="docutils literal notranslate"><span class="pre">coleridge.txt</span></code>.</p>
+<p>Input:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="n">Xanadu</span> <span class="n">did</span> <span class="n">Kubla</span> <span class="n">Khan</span>
+<span class="n">A</span> <span class="n">stately</span> <span class="n">pleasure</span><span class="o">-</span><span class="n">dome</span> <span class="n">decree</span><span class="p">:</span>
+<span class="n">Where</span> <span class="n">Alph</span><span class="p">,</span> <span class="n">the</span> <span class="n">sacred</span> <span class="n">river</span><span class="p">,</span> <span class="n">ran</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Output:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Line</span> <span class="mi">1</span><span class="p">:</span> <span class="n">In</span> <span class="n">Xanadu</span> <span class="n">did</span> <span class="n">Kubla</span> <span class="n">Khan</span>
+<span class="n">Line</span> <span class="mi">2</span><span class="p">:</span> <span class="n">A</span> <span class="n">stately</span> <span class="n">pleasure</span><span class="o">-</span><span class="n">dome</span> <span class="n">decree</span><span class="p">:</span>
+<span class="n">Line</span> <span class="mi">3</span><span class="p">:</span> <span class="n">Where</span> <span class="n">Alph</span><span class="p">,</span> <span class="n">the</span> <span class="n">sacred</span> <span class="n">river</span><span class="p">,</span> <span class="n">ran</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>We open two files, one for reading and another for writing. We then loop over the rows of the input file, simultaneously writing lines to the output file.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;coleridge.txt&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_in</span><span class="p">:</span> <span class="c1"># open file for reading</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;coleridge_new.txt&#39;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f_out</span><span class="p">:</span> <span class="c1"># open file for writing</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+        <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f_in</span><span class="p">:</span>
+            <span class="n">f_out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;Line &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;: &quot;</span> <span class="o">+</span> <span class="n">line</span><span class="p">)</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="csv-files">
+<h2>CSV Files<a class="headerlink" href="#csv-files" title="Permalink to this headline">¶</a></h2>
+<p>A CSV file (Comma Separated Values file) is a plain text file which contains tabular data. Typically a CSV file uses commas to separate columns and new lines to separate rows. The file <code class="docutils literal notranslate"><span class="pre">periodic_table.csv</span></code> (in the same folder as this <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> file) contains tabular data related to the chemical elements:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">number</span><span class="p">,</span><span class="n">name</span><span class="p">,</span><span class="n">symbol</span><span class="p">,</span><span class="n">appearance</span><span class="p">,</span><span class="n">atomic_number</span><span class="p">,</span><span class="n">boiling_point</span>
+<span class="mi">1</span><span class="p">,</span><span class="n">Hydrogen</span><span class="p">,</span><span class="n">H</span><span class="p">,</span><span class="n">colorless</span> <span class="n">gas</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mf">20.271</span>
+<span class="mi">2</span><span class="p">,</span><span class="n">Helium</span><span class="p">,</span><span class="n">He</span><span class="p">,</span><span class="s2">&quot;colorless gas, exhibiting a red-orange glow when placed in a high-voltage electric field&quot;</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mf">4.222</span>
+<span class="mi">3</span><span class="p">,</span><span class="n">Lithium</span><span class="p">,</span><span class="n">Li</span><span class="p">,</span><span class="n">silvery</span><span class="o">-</span><span class="n">white</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">1603</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>CSV files are very commonly used to store scientific data and are very useful for transferring data between different systems. It is possible to read the file using standard Python file and string processing instructions, for example using <code class="docutils literal notranslate"><span class="pre">string.split</span></code> to extract data columns. However, because CSV files are so common, Python includes a special module <code class="docutils literal notranslate"><span class="pre">csv</span></code> which includes functions to automate much of this work.</p>
+<hr class="docutils" />
+<p><strong>NOTE</strong><br />
+If you open a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file on your computer, it might automatically open in MS Excel or other spreadsheet program. However, in fact it is not a spreadsheet file. To see the file in plain text form, open it in a text editor such as notepad (Windows) or TextEdit (Mac). If you are doing a lot of work with text files, it is recommended that you install a dedicated text processing program such as Notepad++ (Windows) or Atom (multiple platforms).</p>
+<hr class="docutils" />
+<p>The following code reads the first, second and sixth columns into four lists:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">csv</span> <span class="c1"># import the csv module</span>
+
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">names</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">melting_points</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">boiling_points</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;periodic_table.csv&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="n">reader</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">reader</span><span class="p">(</span><span class="n">f</span><span class="p">)</span> <span class="c1"># create a reader object from the file</span>
+    <span class="nb">next</span><span class="p">(</span><span class="n">reader</span><span class="p">)</span> <span class="c1"># ignore the header row of the CSV file</span>
+    <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">reader</span><span class="p">:</span> <span class="c1"># iterate over the rows, reading each into a list of strings called row</span>
+        <span class="n">num</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># convert from string to int</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">row</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="c1"># Check if the 5th and 6th columns contain numeric data</span>
+        <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">()</span> <span class="ow">and</span> <span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">():</span>
+            <span class="n">mp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">5</span><span class="p">])</span>
+            <span class="n">bp</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="mi">6</span><span class="p">])</span>
+            <span class="c1"># Append the values to the lists</span>
+            <span class="n">numbers</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">num</span><span class="p">)</span>
+            <span class="n">names</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+            <span class="n">melting_points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">mp</span><span class="p">))</span>
+            <span class="n">boiling_points</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="n">bp</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now we have four lists containing four columns from the CSV file. Let’s make a scatter plot showing boiling point against melting point:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">melting_points</span><span class="p">,</span> <span class="n">boiling_points</span><span class="p">)</span> <span class="c1"># Plot a scatter plot</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Melting point (K)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Boiling point (K)&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Melting and Boiling Points of Chemical Elements&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Melting and Boiling Points of Chemical Elements&#39;)
+</pre></div>
+</div>
+<img alt="../_images/6_files_21_1.png" src="../_images/6_files_21_1.png" />
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./6_files"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../5_arrays/5_arrays.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Numpy</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../7_images/7_images.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title">Images Processing</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By The Jupyter Book Community<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
