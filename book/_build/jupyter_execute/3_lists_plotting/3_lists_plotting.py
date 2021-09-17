@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Tutorial 4: Lists and Plotting
+# # Lists and Plotting
 # ## Lists
-# A **list** is a Python data type that stores a sequence of values. For example, suppose we have the following data representing five years' population data for a species:
+# A `list` is a Python data type that stores a sequence of values. For example, suppose we have the following data representing five years' population data for a species:
 
 # In[1]:
 
@@ -43,11 +43,10 @@ x = cities[2]
 print(x)
 
 
-# ---
-# **NOTES**  
+# :::{note} 
 # - Lists are indexed starting from `0`. If a list has `n` elements, then the last element is at index `n - 1`.
 # - Square brackets are used for two distinct purposes: for list creation: `x = [1, 2, 4]`, and list element access: `x[2]`.
-# ---
+# :::
 
 # ## Traversing Lists
 # There are two ways of accessing all elements of a list. The first way is to use a `for` loop to loop over all index values. We use the Python function `len` to determine the number of elements in the list.
@@ -112,14 +111,13 @@ print(i)
 import matplotlib.pyplot as plt
 
 
-# ---
-# **NOTES**
+# :::{note}
 # - The Python statement `import a` causes the Python package (or module) `a` to be imported. Any function defined in `a` is then available by typing '`a.`' followed by the function name.
 # - `import a as b` gives `a` an alias (nickname) `b`, so that functions are available by typing '`b.`' followed by the function name. This is useful when `a` has a long name (such as `matplotlib.pyplot`).
 # - Python includes built-in modules such as `sys` (system functions) and `os` (operating system functions) which can be imported in the same way.
 # - Other packages are not part of Python itself but are pre-installed as part of a Python distribution (such as Anaconda or Cocalc). In this course we will use `matplotlib` and `numpy`.
 # - There are many third-party modules available, which typically need to be downloaded and installed. Examples include `biopython` (for bioinformatics) and `pandas` (for data analysis).
-# ---
+# :::
 # 
 # Suppose we have collected the following data which we would like to plot on a line graph.
 # 

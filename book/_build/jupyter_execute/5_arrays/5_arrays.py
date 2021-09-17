@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Numpy
+# # Arrays
 
 # We are already familiar with Python lists, which are used for storing sequences of data. In this lesson we will discover a second data type for storing sequences of data: the **Numpy array**. `Numpy` is a Python package designed for working with numerical data. To use it, first import the `numpy` package and give it the alias `np`:
 

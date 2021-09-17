@@ -53,8 +53,8 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Tutorial 3: Loops" href="../2_loops_functions/2_loops_functions.html" />
-    <link rel="prev" title="Welcome to your Jupyter Book" href="../intro.html" />
+    <link rel="next" title="Functions and Loops" href="../2_loops_functions/2_loops_functions.html" />
+    <link rel="prev" title="Lecture Notes for NSCI0007 Scientific Computing" href="../intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -87,7 +87,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Welcome to your Jupyter Book
+   Lecture Notes for NSCI0007 Scientific Computing
   </a>
  </li>
 </ul>
@@ -99,12 +99,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../2_loops_functions/2_loops_functions.html">
-   Tutorial 3: Loops
+   Functions and Loops
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../3_lists_plotting/3_lists_plotting.html">
-   Tutorial 4: Lists and Plotting
+   Lists and Plotting
   </a>
  </li>
  <li class="toctree-l1">
@@ -114,7 +114,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../5_arrays/5_arrays.html">
-   Numpy
+   Arrays
   </a>
  </li>
  <li class="toctree-l1">
@@ -232,21 +232,9 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#printing">
-   Printing
+  <a class="reference internal nav-link" href="#example">
+   Example
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#errors">
-   Errors
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#example">
-     Example
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#variables">
@@ -254,8 +242,13 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#strings">
-   Strings
+  <a class="reference internal nav-link" href="#printing">
+   Printing
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors">
+   Errors
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -274,24 +267,34 @@
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     Example
+    <a class="reference internal nav-link" href="#example-1">
+     Example 1
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     Example
+    <a class="reference internal nav-link" href="#example-2">
+     Example 2
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#decisions">
-   Decisions
+  <a class="reference internal nav-link" href="#python-operators">
+   Python Operators
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#if-statement">
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     If
+    </span>
+   </code>
+   statement
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
+    <a class="reference internal nav-link" href="#id1">
      Example
     </a>
    </li>
@@ -310,34 +313,196 @@
                 
   <div class="section" id="introduction-to-python">
 <h1>Introduction to Python<a class="headerlink" href="#introduction-to-python" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="printing">
-<h2>Printing<a class="headerlink" href="#printing" title="Permalink to this headline">¶</a></h2>
-<p>In this section, we introduce the first Python function in detail.</p>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>We’ll start with a simple example of a Python program which simulates the growth in population of a colony of bacteria. Suppose we start with 100 cells and the population doubles every hour. How many hours will it take to reach a population of 10000 cells?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># My first program</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My name is Pete :-)&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="k">while</span> <span class="n">pop</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">:</span>
+    <span class="c1"># double the population</span>
+    <span class="n">pop</span> <span class="o">=</span> <span class="n">pop</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>My name is Pete :-)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200
+400
+800
+1600
+3200
+6400
+12800
 </pre></div>
 </div>
 </div>
 </div>
-<p>The first line</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># My first program</span>
+<p>Let’s examine each line in turn. First, we define a <strong>variable</strong> <code class="docutils literal notranslate"><span class="pre">pop</span></code> and set its value to 100:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
 </pre></div>
 </div>
-<p>is a comment. It begins with the <code class="docutils literal notranslate"><span class="pre">#</span></code> character and will be ignored by the Python interpreter.</p>
-<p>The second line</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;My name is Pete :-)&quot;</span><span class="p">)</span>
+<p>Then we define a <code class="docutils literal notranslate"><span class="pre">while</span></code> loop. A <code class="docutils literal notranslate"><span class="pre">while</span></code> loop repeats a section of code while the specified condition is true:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="n">pop</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">:</span>
+</pre></div>
+</div>
+<p>The code in the indented block below this line is then executed repeatedly. The line <code class="docutils literal notranslate"><span class="pre">#</span> <span class="pre">double</span> <span class="pre">the</span> <span class="pre">population</span></code> is a comment and is ignored by the Python interpreter. Next, multiply <code class="docutils literal notranslate"><span class="pre">pop</span></code> by 2:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">pop</span> <span class="o">=</span> <span class="n">pop</span> <span class="o">*</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Then <code class="docutils literal notranslate"><span class="pre">print</span></code> the value of <code class="docutils literal notranslate"><span class="pre">pop</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="nb">print</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Execution terminates once the condition <code class="docutils literal notranslate"><span class="pre">pop</span> <span class="pre">&lt;</span> <span class="pre">1000</span></code> becomes false.</p>
+<p>When we run the code, we can see that it prints 7 values, so it must take 7 hours for the population to exceed 10000. But let’s adapt the code so that it prints this number. We’ll need to introduce a second variable to keep track of the number of hours:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">pop</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">:</span>
+    <span class="n">pop</span> <span class="o">=</span> <span class="n">pop</span> <span class="o">*</span> <span class="mi">2</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of hours:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>200
+400
+800
+1600
+3200
+6400
+12800
+Number of hours: 7
+</pre></div>
+</div>
+</div>
+</div>
+<p>The value of <code class="docutils literal notranslate"><span class="pre">i</span></code> is initialised to zero, and then increased by 1 during each iteration of the loop. Notice that the value of <code class="docutils literal notranslate"><span class="pre">pop</span></code> is printed 7 times, whereas the Number of hours <code class="docutils literal notranslate"><span class="pre">i</span></code> is only printed once after the loop terminates since it is outside the indented block.</p>
+<p>Finally, suppose the the population growth rate is 1.02 rather than 2. If we print the population in every iteration of the loop, we’re going to have an enormous list of numbers. So let’s print it only once every 24 hours instead:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">pop</span> <span class="o">&lt;</span> <span class="mi">10000</span><span class="p">:</span>
+    <span class="n">pop</span> <span class="o">=</span> <span class="n">pop</span> <span class="o">*</span> <span class="mf">1.02</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="n">i</span> <span class="o">%</span> <span class="mi">24</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+    
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of hours:&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>160.84372494752262
+258.70703854994304
+416.1140375051517
+669.293317952817
+1076.516303420177
+1731.5089220883863
+2785.023448085657
+4479.535454562904
+7205.051685463912
+Number of hours: 233
+</pre></div>
+</div>
+</div>
+</div>
+<p>We have introduced the following line <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">i</span> <span class="pre">%</span> <span class="pre">24</span> <span class="pre">==</span> <span class="pre">0:</span></code>. There are two separate constructs here: an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement and the <code class="docutils literal notranslate"><span class="pre">%</span></code> operator. The indented code <code class="docutils literal notranslate"><span class="pre">print(pop)</span></code> will only be executed if the condition <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">%</span> <span class="pre">24</span> <span class="pre">==</span> <span class="pre">0</span></code> is true. <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">%</span> <span class="pre">24</span></code> means ‘remainder after dividing <code class="docutils literal notranslate"><span class="pre">i</span></code> by 24’, which is only equal to zero when <code class="docutils literal notranslate"><span class="pre">i</span></code> is a multiple of 24. We’ll look at this in more detail later.</p>
+<p>This may be a simple example, but there is already some significant complexity hidden in here. We’ll now cover in more detail the various language constructs used here, and introduce a few more.</p>
+</div>
+<div class="section" id="variables">
+<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
+<p>A <strong>variable</strong> is a named storage location in the computer’s memory. We store a value in a variable so that we can use it later in our computations.</p>
+<p>We use <strong>assignment</strong> to set the value of a variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">speed</span> <span class="o">=</span> <span class="mi">35</span> <span class="c1"># assign the value 35 to a variable called speed</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>35
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can assign a new value to an existing variable:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">speed</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1"># The new value replaces the old value</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40
+</pre></div>
+</div>
+</div>
+</div>
+<p>Assignment is not the same as equality. We can have the same variable on both sides of the equals sign:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># Calculcate speed + 2 then assign the result to variable &#39;speed&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
+</pre></div>
+</div>
+</div>
+</div>
+<p>This is a legal statement because Python first evaluates the expression on the right of the equals sign (<code class="docutils literal notranslate"><span class="pre">speed</span> <span class="pre">+</span> <span class="pre">2</span></code>) and <em>then</em> places the result into the variable on the left.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>VARIABLE NAMING RULES</strong></p>
+<ul class="simple">
+<li><p>A variable name can only contain alpha-numeric characters and underscores (<code class="docutils literal notranslate"><span class="pre">A-Z</span></code>, <code class="docutils literal notranslate"><span class="pre">a-z</span></code>, <code class="docutils literal notranslate"><span class="pre">0-9</span></code>, and <code class="docutils literal notranslate"><span class="pre">_</span></code>)</p></li>
+<li><p>A variable name cannot start with a number</p></li>
+<li><p>Variable names are case-sensitive (<code class="docutils literal notranslate"><span class="pre">age</span></code>, <code class="docutils literal notranslate"><span class="pre">Age</span></code> and <code class="docutils literal notranslate"><span class="pre">AGE</span></code> are three different variables)</p></li>
+</ul>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Beware of accidentally renaming Python keywords. The following is correct Python but a Very Bad Idea because it renames the <code class="docutils literal notranslate"><span class="pre">print</span></code> function, which will result in some very weird errors!</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="nb">print</span><span class="p">)</span> <span class="c1"># this won&#39;t work.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="printing">
+<h2>Printing<a class="headerlink" href="#printing" title="Permalink to this headline">¶</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">print</span></code> function is used to display values to the screen.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Good morning :-)&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Good morning :-)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Good morning :-)&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>instructs Python to display a line of text. We call the function <code class="docutils literal notranslate"><span class="pre">print</span></code> and pass it the text to be displayed.</p>
 <p>A sequence of characters enclosed in quotation marks</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;My name is Pete :-)&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;Good morning :-)&quot;</span>
 </pre></div>
 </div>
 <p>is called a <strong>string</strong>.</p>
@@ -396,7 +561,7 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_455/2048779763.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_549/2048779763.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;***&quot;</span>
                <span class="o">^</span>
 <span class="ne">SyntaxError</span>: unexpected EOF while parsing
@@ -425,137 +590,10 @@
 </div>
 </div>
 <p>The error is on <code class="docutils literal notranslate"><span class="pre">line</span> <span class="pre">3</span></code>. To view line numbers change to command mode (press <code class="docutils literal notranslate"><span class="pre">Esc</span></code>) then press the <code class="docutils literal notranslate"><span class="pre">l</span></code> key. Now we can see that the error is on line 3 and we can fix it by putting in the missing quote symbol <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.</p>
-<div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
-<p>A car is travelling at 15 metres per second. Is it exceeding the speed limit of 30 miles per hour?</p>
-<p>To solve this problem, first we define variables to store the speed of car in m/s and the speed limit in mph:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">car_speed_ms</span> <span class="o">=</span> <span class="mi">15</span>
-<span class="n">speed_limit_mph</span> <span class="o">=</span> <span class="mi">30</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>Next, we need to convert the car speed into mph and store it in a new variable. We multiply by 3600 (seconds in an hour) then divide by 1609.34 (metres in a mile).</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">car_speed_mph</span> <span class="o">=</span> <span class="n">car_speed_ms</span> <span class="o">*</span> <span class="mi">3600</span> <span class="o">/</span> <span class="mf">1609.34</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">car_speed_mph</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>33.55412777908957
-</pre></div>
-</div>
-</div>
-</div>
-<p>By printing the result, we can see that the car is exceeding the speed limit. But let’s get Python to do the check, and print ‘Slow down, Nigel!’ if the car is driving too fast.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Slow down, Nigel!&quot;</span>
-<span class="k">if</span> <span class="n">car_speed_mph</span> <span class="o">&gt;</span> <span class="n">speed_limit_mph</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Slow down, Nigel!
-</pre></div>
-</div>
-</div>
-</div>
-<hr class="docutils" />
-<p><strong>Exercise</strong><br />
-Check if a car travelling at 13 m/s is exceeding the speed limit by changing the value of <code class="docutils literal notranslate"><span class="pre">car_speed_ms</span></code> and re-running the code.</p>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="variables">
-<h2>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h2>
-<p>A <strong>variable</strong> is a named storage location in the computer’s memory. We store a value in a variable so that we can use it later in our computations.</p>
-<p>We use <strong>assignment</strong> to set the value of a variable:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">speed</span> <span class="o">=</span> <span class="mi">35</span> <span class="c1"># assign the value 35 to a variable called speed</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>35
-</pre></div>
-</div>
-</div>
-</div>
-<p>We can assign a new value to an existing variable:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">speed</span> <span class="o">=</span> <span class="mi">40</span> <span class="c1"># The new value replaces the old value</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>40
-</pre></div>
-</div>
-</div>
-</div>
-<p>Assignment is not the same as equality. We can have the same variable on both sides of the equals sign:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">speed</span> <span class="o">=</span> <span class="n">speed</span> <span class="o">+</span> <span class="mi">2</span> <span class="c1"># Calculcate speed + 2 then assign the result to variable &#39;speed&#39;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">speed</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42
-</pre></div>
-</div>
-</div>
-</div>
-<p>This is a legal statement because Python first evaluates the expression on the right of the equals sign (<code class="docutils literal notranslate"><span class="pre">speed</span> <span class="pre">+</span> <span class="pre">2</span></code>) and <em>then</em> places the result into the variable on the left.</p>
-<hr class="docutils" />
-<p><strong>VARIABLE NAMING RULES</strong></p>
-<ul class="simple">
-<li><p>A variable name can only contain alpha-numeric characters and underscores (<code class="docutils literal notranslate"><span class="pre">A-Z</span></code>, <code class="docutils literal notranslate"><span class="pre">a-z</span></code>, <code class="docutils literal notranslate"><span class="pre">0-9</span></code>, and <code class="docutils literal notranslate"><span class="pre">_</span></code>)</p></li>
-<li><p>A variable name cannot start with a number</p></li>
-<li><p>Variable names are case-sensitive (<code class="docutils literal notranslate"><span class="pre">age</span></code>, <code class="docutils literal notranslate"><span class="pre">Age</span></code> and <code class="docutils literal notranslate"><span class="pre">AGE</span></code> are three different variables)</p></li>
-</ul>
-<hr class="docutils" />
-<hr class="docutils" />
-<p><strong>BEWARE!</strong></p>
-<p>Beware of accidentally renaming Python keywords. The following is correct Python but a very bad idea because it renames the <code class="docutils literal notranslate"><span class="pre">print</span></code> function, which will result in some very weird errors!</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># DON&#39;T DO THIS!</span>
-<span class="nb">print</span> <span class="o">=</span> <span class="mi">5</span>
-</pre></div>
-</div>
-</div>
-<hr class="docutils" />
-<div class="section" id="strings">
-<h2>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h2>
-<p>A <strong>string</strong> is a sequence of characters. Use single or double quote characters to delimit a string.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">message</span> <span class="o">=</span> <span class="s2">&quot;Don&#39;t do it!&quot;</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">message</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Don&#39;t do it!
-</pre></div>
-</div>
-</div>
-</div>
 </div>
 <div class="section" id="number-types">
 <h2>Number Types<a class="headerlink" href="#number-types" title="Permalink to this headline">¶</a></h2>
 <p>Every Python variable has a <strong>data type</strong> as well as a value. The type determines what operations can be performed on the variable and how it is stored in the computer’s memory. Python supports a number of primitive data types including numbers, strings, lists and files and in particular there are two number types: <strong>integers</strong> and <strong>floating point numbers</strong>. When we specify a number in code it is important to understand which type we are creating:</p>
-<p><strong>NUMBER TYPES</strong></p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Number</p></th>
@@ -674,8 +712,8 @@ Check if a car travelling at 13 m/s is exceeding the speed limit by changing the
 </div>
 </div>
 </div>
-<div class="section" id="id1">
-<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-1">
+<h3>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">%</span></code> operator is useful to determine if a variable is divisible by a number. For example, if a number is even its remainder after dividing by 2 is zero; if it is odd its remainder after dividing by 2 is 1:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -694,8 +732,8 @@ Check if a car travelling at 13 m/s is exceeding the speed limit by changing the
 </div>
 </div>
 </div>
-<div class="section" id="id2">
-<h3>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="example-2">
+<h3>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h3>
 <p>Suppose we have 1234 pennies in the piggy-bank. How much do we have in pounds and pence? First we divide by 100 to get the while number of pounds:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -725,8 +763,10 @@ Check if a car travelling at 13 m/s is exceeding the speed limit by changing the
 </div>
 </div>
 </div>
-<hr class="docutils" />
-<p><strong>OPERATOR LIST</strong></p>
+</div>
+</div>
+<div class="section" id="python-operators">
+<h2>Python Operators<a class="headerlink" href="#python-operators" title="Permalink to this headline">¶</a></h2>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Operator</p></th>
@@ -758,10 +798,8 @@ Check if a car travelling at 13 m/s is exceeding the speed limit by changing the
 </tbody>
 </table>
 </div>
-</div>
-<hr class="docutils" />
-<div class="section" id="decisions">
-<h2>Decisions<a class="headerlink" href="#decisions" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="if-statement">
+<h2><code class="docutils literal notranslate"><span class="pre">If</span></code> statement<a class="headerlink" href="#if-statement" title="Permalink to this headline">¶</a></h2>
 <p>The specific heat capacity of water depends on whether it is in a solid, liquid or gaseous state.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -804,8 +842,9 @@ Check if a car travelling at 13 m/s is exceeding the speed limit by changing the
 </div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement evaluates the expression <code class="docutils literal notranslate"><span class="pre">temp</span> <span class="pre">&gt;</span> <span class="pre">100</span></code> and if it is true, executes the indented code directly underneath, then skips to the next statement after the <code class="docutils literal notranslate"><span class="pre">if-else</span></code> block. If it is not true, execution moves to the <code class="docutils literal notranslate"><span class="pre">elif</span></code> statement. If the expression <code class="docutils literal notranslate"><span class="pre">temp</span> <span class="pre">&gt;</span> <span class="pre">0</span></code> is true, the indented code beneath it is executed  and execution skips to the next statement after the <code class="docutils literal notranslate"><span class="pre">if-else</span></code> block. Finally, if neither expression is true, the indent code block below the <code class="docutils literal notranslate"><span class="pre">else</span></code> statement is executed.</p>
-<hr class="docutils" />
-<p><strong>NOTES</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong><code class="docutils literal notranslate"><span class="pre">If</span></code> statement</strong></p>
 <ul class="simple">
 <li><p>Exactly one of the indented code blocks will be executed.</p></li>
 <li><p>Use the <code class="docutils literal notranslate"><span class="pre">tab</span></code> key to indent code by exactly four spaces.</p></li>
@@ -813,9 +852,26 @@ Check if a car travelling at 13 m/s is exceeding the speed limit by changing the
 <li><p>Note the unusual keyword <code class="docutils literal notranslate"><span class="pre">elif</span></code> (rather than <code class="docutils literal notranslate"><span class="pre">elseif</span></code>).</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">elif</span></code> and <code class="docutils literal notranslate"><span class="pre">else</span></code> statements are optional.</p></li>
 </ul>
-<hr class="docutils" />
-<div class="section" id="id3">
-<h3>Example<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>Assignment vs Equality</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">=</span></code> is the <strong>assignment</strong> operator. It assigns the value on the right to the variable on the left:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">6</span> <span class="o">+</span> <span class="mi">7</span> <span class="c1"># sets x to the value 13</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">==</span></code> is the <strong>equality</strong> operator. It evaluates to <code class="docutils literal notranslate"><span class="pre">True</span></code> if the expression on the left is equal to the expression on the right.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">==</span> <span class="mi">13</span> <span class="c1"># returns `True`</span>
+</pre></div>
+</div>
+<p>The condition in an <code class="docutils literal notranslate"><span class="pre">if</span></code> statement should always use <code class="docutils literal notranslate"><span class="pre">==</span></code>. This is a common mistake:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">13</span><span class="p">:</span> <span class="c1"># this is a mistake. Be careful!</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;yes&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id1">
+<h3>Example<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>The following example checks if the number <code class="docutils literal notranslate"><span class="pre">x</span></code> is divisible by 2, and prints an appropriate message.</p>
 <p>Note that we use the operator <code class="docutils literal notranslate"><span class="pre">==</span></code> to check for equality.</p>
 <div class="cell docutils container">
@@ -873,7 +929,7 @@ Check if a car travelling at 13 m/s is exceeding the speed limit by changing the
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Welcome to your Jupyter Book</p>
+                <p class="prevnext-title">Lecture Notes for NSCI0007 Scientific Computing</p>
             </div>
         </a>
     </div>
@@ -881,7 +937,7 @@ Check if a car travelling at 13 m/s is exceeding the speed limit by changing the
         <a class="right-next" href="../2_loops_functions/2_loops_functions.html" title="next page">
             <div class="prevnext-info">
                 <p class="prevnext-label">next</p>
-                <p class="prevnext-title">Tutorial 3: Loops</p>
+                <p class="prevnext-title">Functions and Loops</p>
             </div>
             <i class="prevnext-label fas fa-angle-right"></i>
         </a>

@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutorial 4: Lists and Plotting &#8212; My sample book</title>
+    <title>Lists and Plotting &#8212; My sample book</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Strings" href="../4_strings/4_strings.html" />
-    <link rel="prev" title="Tutorial 3: Loops" href="../2_loops_functions/2_loops_functions.html" />
+    <link rel="prev" title="Functions and Loops" href="../2_loops_functions/2_loops_functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -85,7 +85,7 @@
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../intro.html">
-   Welcome to your Jupyter Book
+   Lecture Notes for NSCI0007 Scientific Computing
   </a>
  </li>
 </ul>
@@ -97,12 +97,12 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../2_loops_functions/2_loops_functions.html">
-   Tutorial 3: Loops
+   Functions and Loops
   </a>
  </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Tutorial 4: Lists and Plotting
+   Lists and Plotting
   </a>
  </li>
  <li class="toctree-l1">
@@ -112,7 +112,7 @@
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../5_arrays/5_arrays.html">
-   Numpy
+   Arrays
   </a>
  </li>
  <li class="toctree-l1">
@@ -265,11 +265,11 @@
         
               <div>
                 
-  <div class="section" id="tutorial-4-lists-and-plotting">
-<h1>Tutorial 4: Lists and Plotting<a class="headerlink" href="#tutorial-4-lists-and-plotting" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="lists-and-plotting">
+<h1>Lists and Plotting<a class="headerlink" href="#lists-and-plotting" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="lists">
 <h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
-<p>A <strong>list</strong> is a Python data type that stores a sequence of values. For example, suppose we have the following data representing five years’ population data for a species:</p>
+<p>A <code class="docutils literal notranslate"><span class="pre">list</span></code> is a Python data type that stores a sequence of values. For example, suppose we have the following data representing five years’ population data for a species:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">populations</span> <span class="o">=</span> <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">54</span><span class="p">,</span> <span class="mi">102</span><span class="p">,</span> <span class="mi">206</span><span class="p">]</span>
@@ -330,14 +330,14 @@ Population in year 3: 102
 </div>
 </div>
 </div>
-<hr class="docutils" />
-<p><strong>NOTES</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>Lists are indexed starting from <code class="docutils literal notranslate"><span class="pre">0</span></code>. If a list has <code class="docutils literal notranslate"><span class="pre">n</span></code> elements, then the last element is at index <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">-</span> <span class="pre">1</span></code>.</p></li>
 <li><p>Square brackets are used for two distinct purposes: for list creation: <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">[1,</span> <span class="pre">2,</span> <span class="pre">4]</span></code>, and list element access: <code class="docutils literal notranslate"><span class="pre">x[2]</span></code>.</p></li>
 </ul>
 </div>
-<hr class="docutils" />
+</div>
 <div class="section" id="traversing-lists">
 <h2>Traversing Lists<a class="headerlink" href="#traversing-lists" title="Permalink to this headline">¶</a></h2>
 <p>There are two ways of accessing all elements of a list. The first way is to use a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop to loop over all index values. We use the Python function <code class="docutils literal notranslate"><span class="pre">len</span></code> to determine the number of elements in the list.</p>
@@ -440,8 +440,8 @@ Population: 206
 </div>
 </div>
 </div>
-<hr class="docutils" />
-<p><strong>NOTES</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>The Python statement <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">a</span></code> causes the Python package (or module) <code class="docutils literal notranslate"><span class="pre">a</span></code> to be imported. Any function defined in <code class="docutils literal notranslate"><span class="pre">a</span></code> is then available by typing ‘<code class="docutils literal notranslate"><span class="pre">a.</span></code>’ followed by the function name.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">a</span> <span class="pre">as</span> <span class="pre">b</span></code> gives <code class="docutils literal notranslate"><span class="pre">a</span></code> an alias (nickname) <code class="docutils literal notranslate"><span class="pre">b</span></code>, so that functions are available by typing ‘<code class="docutils literal notranslate"><span class="pre">b.</span></code>’ followed by the function name. This is useful when <code class="docutils literal notranslate"><span class="pre">a</span></code> has a long name (such as <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>).</p></li>
@@ -449,7 +449,7 @@ Population: 206
 <li><p>Other packages are not part of Python itself but are pre-installed as part of a Python distribution (such as Anaconda or Cocalc). In this course we will use <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy</span></code>.</p></li>
 <li><p>There are many third-party modules available, which typically need to be downloaded and installed. Examples include <code class="docutils literal notranslate"><span class="pre">biopython</span></code> (for bioinformatics) and <code class="docutils literal notranslate"><span class="pre">pandas</span></code> (for data analysis).</p></li>
 </ul>
-<hr class="docutils" />
+</div>
 <p>Suppose we have collected the following data which we would like to plot on a line graph.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -503,7 +503,7 @@ Population: 206
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_495</span><span class="o">/</span><span class="mf">1475974717.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_589</span><span class="o">/</span><span class="mf">1475974717.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># create figure of size 4 by 4 inches</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># plot a line graph</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span> <span class="c1"># add an x-axis label</span>
@@ -555,7 +555,7 @@ Population: 206
             <i class="prevnext-label fas fa-angle-left"></i>
             <div class="prevnext-info">
                 <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Tutorial 3: Loops</p>
+                <p class="prevnext-title">Functions and Loops</p>
             </div>
         </a>
     </div>

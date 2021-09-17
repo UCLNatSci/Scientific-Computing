@@ -3,126 +3,84 @@
 
 # # Introduction to Python
 # 
-# ## Printing
+# ## Example
 # 
-# In this section, we introduce the first Python function in detail.
+# We'll start with a simple example of a Python program which simulates the growth in population of a colony of bacteria. Suppose we start with 100 cells and the population doubles every hour. How many hours will it take to reach a population of 10000 cells?
 
 # In[1]:
 
 
-# My first program
-print("My name is Pete :-)")
+pop = 100
+
+while pop < 10000:
+    # double the population
+    pop = pop * 2
+    print(pop)
 
 
-# The first line
-# ```
-# # My first program
-# ```  
-# is a comment. It begins with the `#` character and will be ignored by the Python interpreter.  
+# Let's examine each line in turn. First, we define a **variable** `pop` and set its value to 100:
 # 
-# The second line
 # ```
-# print("My name is Pete :-)")
+# pop = 100
 # ```
-# instructs Python to display a line of text. We call the function `print` and pass it the text to be displayed.  
 # 
-# A sequence of characters enclosed in quotation marks  
-# ```
-# "My name is Pete :-)"
-# ```
-# is called a **string**.
+# Then we define a `while` loop. A `while` loop repeats a section of code while the specified condition is true:
 # 
-# The print statement can also print numbers. The following example evaluates `3 + 4` and prints the result:
+# ```
+# while pop < 10000:
+# ```
+# 
+# The code in the indented block below this line is then executed repeatedly. The line `# double the population` is a comment and is ignored by the Python interpreter. Next, multiply `pop` by 2:
+# 
+# ```
+#     pop = pop * 2
+# ```
+# 
+# Then `print` the value of `pop`:
+# 
+# ```
+#    print(pop)
+# ```
+# 
+# Execution terminates once the condition `pop < 1000` becomes false.
+# 
+# When we run the code, we can see that it prints 7 values, so it must take 7 hours for the population to exceed 10000. But let's adapt the code so that it prints this number. We'll need to introduce a second variable to keep track of the number of hours:
 
 # In[2]:
 
 
-print(3 + 4)
+pop = 100
+i = 0
+while pop < 10000:
+    pop = pop * 2
+    i = i + 1
+    print(pop)
+    
+print("Number of hours:", i)
 
 
-# The print statement can print multiple values. Separate each value by a comma:
+# The value of `i` is initialised to zero, and then increased by 1 during each iteration of the loop. Notice that the value of `pop` is printed 7 times, whereas the Number of hours `i` is only printed once after the loop terminates since it is outside the indented block.
+# 
+# Finally, suppose the the population growth rate is 1.02 rather than 2. If we print the population in every iteration of the loop, we're going to have an enormous list of numbers. So let's print it only once every 24 hours instead:
 
 # In[3]:
 
 
-print("3 + 4 =", 3 + 4, ":-)")
+pop = 100
+i = 0
+while pop < 10000:
+    pop = pop * 1.02
+    i = i + 1
+    if i % 24 == 0:
+        print(pop)
+    
+print("Number of hours:", i)
 
 
-# Notice that Python inserts a space between each value.
+# We have introduced the following line `if i % 24 == 0:`. There are two separate constructs here: an `if` statement and the `%` operator. The indented code `print(pop)` will only be executed if the condition `i % 24 == 0` is true. `i % 24` means 'remainder after dividing `i` by 24', which is only equal to zero when `i` is a multiple of 24. We'll look at this in more detail later.
+
+# This may be a simple example, but there is already some significant complexity hidden in here. We'll now cover in more detail the various language constructs used here, and introduce a few more.
 # 
-# The `print` function starts a new line after each statement. If no arguments are passed to the function, it prints a blank line. 
-
-# In[4]:
-
-
-print("***")
-print()
-print("***")
-
-
-# ## Errors
-# 
-# Python expects code to have a very specific format. For example, every open bracket '`(`' must have a matching closing bracket '`)`'. If there is an error in the code, python will generate an **error message**.
-
-# In[5]:
-
-
-print("***"
-
-
-# The error message tells us that the error is on `line 1` and that the type of error is `SyntaxError`.
-# 
-# This information can be very useful, especially in longer programs.
-
-# In[13]:
-
-
-print("This")
-print("code")
-print("works)
-print("perfectly!")
-
-
-# The error is on `line 3`. To view line numbers change to command mode (press `Esc`) then press the `l` key. Now we can see that the error is on line 3 and we can fix it by putting in the missing quote symbol `"`.
-
-# ### Example
-# 
-# A car is travelling at 15 metres per second. Is it exceeding the speed limit of 30 miles per hour?
-# 
-# To solve this problem, first we define variables to store the speed of car in m/s and the speed limit in mph:
-
-# In[4]:
-
-
-car_speed_ms = 15
-speed_limit_mph = 30
-
-
-# Next, we need to convert the car speed into mph and store it in a new variable. We multiply by 3600 (seconds in an hour) then divide by 1609.34 (metres in a mile).
-
-# In[5]:
-
-
-car_speed_mph = car_speed_ms * 3600 / 1609.34
-print(car_speed_mph)
-
-
-# By printing the result, we can see that the car is exceeding the speed limit. But let's get Python to do the check, and print 'Slow down, Nigel!' if the car is driving too fast.
-
-# In[6]:
-
-
-message = "Slow down, Nigel!"
-if car_speed_mph > speed_limit_mph:
-    print(message)
-
-
-# ---
-# **Exercise**  
-# Check if a car travelling at 13 m/s is exceeding the speed limit by changing the value of `car_speed_ms` and re-running the code.
-# 
-# ---
-
 # ## Variables
 # 
 # A **variable** is a named storage location in the computer's memory. We store a value in a variable so that we can use it later in our computations.
@@ -156,42 +114,101 @@ print(speed)
 
 # This is a legal statement because Python first evaluates the expression on the right of the equals sign (`speed + 2`) and *then* places the result into the variable on the left.
 
-# ---
+# ```{note}
 # **VARIABLE NAMING RULES**  
 # - A variable name can only contain alpha-numeric characters and underscores (`A-Z`, `a-z`, `0-9`, and `_`)
 # - A variable name cannot start with a number
 # - Variable names are case-sensitive (`age`, `Age` and `AGE` are three different variables)
-# ---
-# 
-# ---
-# **BEWARE!**  
-# 
-# Beware of accidentally renaming Python keywords. The following is correct Python but a very bad idea because it renames the `print` function, which will result in some very weird errors!
+# ```
+# :::{warning}
+# Beware of accidentally renaming Python keywords. The following is correct Python but a Very Bad Idea because it renames the `print` function, which will result in some very weird errors!
 # 
 # ```
-# # DON'T DO THIS!
 # print = 5
-# ```
 # 
-# ---
+# print(print) # this won't work.
+# ```
+# :::
 # 
 
-# ## Strings
+# ## Printing
 # 
-# A **string** is a sequence of characters. Use single or double quote characters to delimit a string.
+# The `print` function is used to display values to the screen.
+
+# In[7]:
+
+
+print("Good morning :-)")
+
+
+# ```
+# print("Good morning :-)")
+# ```
+# instructs Python to display a line of text. We call the function `print` and pass it the text to be displayed.  
+# 
+# A sequence of characters enclosed in quotation marks  
+# ```
+# "Good morning :-)"
+# ```
+# is called a **string**.
+# 
+# The print statement can also print numbers. The following example evaluates `3 + 4` and prints the result:
 
 # In[8]:
 
 
-message = "Don't do it!"
-print(message)
+print(3 + 4)
 
+
+# The print statement can print multiple values. Separate each value by a comma:
+
+# In[9]:
+
+
+print("3 + 4 =", 3 + 4, ":-)")
+
+
+# Notice that Python inserts a space between each value.
+# 
+# The `print` function starts a new line after each statement. If no arguments are passed to the function, it prints a blank line. 
+
+# In[10]:
+
+
+print("***")
+print()
+print("***")
+
+
+# ## Errors
+# 
+# Python expects code to have a very specific format. For example, every open bracket '`(`' must have a matching closing bracket '`)`'. If there is an error in the code, python will generate an **error message**.
+
+# In[11]:
+
+
+print("***"
+
+
+# The error message tells us that the error is on `line 1` and that the type of error is `SyntaxError`.
+# 
+# This information can be very useful, especially in longer programs.
+
+# In[13]:
+
+
+print("This")
+print("code")
+print("works)
+print("perfectly!")
+
+
+# The error is on `line 3`. To view line numbers change to command mode (press `Esc`) then press the `l` key. Now we can see that the error is on line 3 and we can fix it by putting in the missing quote symbol `"`.
 
 # ## Number Types
 # 
 # Every Python variable has a **data type** as well as a value. The type determines what operations can be performed on the variable and how it is stored in the computer's memory. Python supports a number of primitive data types including numbers, strings, lists and files and in particular there are two number types: **integers** and **floating point numbers**. When we specify a number in code it is important to understand which type we are creating:
 # 
-# **NUMBER TYPES**
 # |Number|Type|Description|
 # |---|---|---|
 # |`5`|`int`|A whole number|
@@ -252,7 +269,7 @@ print(message)
 9 % 4
 
 
-# ### Example
+# ### Example 1
 # The `%` operator is useful to determine if a variable is divisible by a number. For example, if a number is even its remainder after dividing by 2 is zero; if it is odd its remainder after dividing by 2 is 1:
 
 # In[14]:
@@ -264,7 +281,7 @@ x = 6
 print(x % 2)
 
 
-# ### Example
+# ### Example 2
 # Suppose we have 1234 pennies in the piggy-bank. How much do we have in pounds and pence? First we divide by 100 to get the while number of pounds:
 
 # In[15]:
@@ -284,8 +301,7 @@ pence = num_pennies % 100
 print("Pence:", pence)
 
 
-# ---
-# **OPERATOR LIST**  
+# ## Python Operators
 # 
 # | Operator | Symbol |
 # |---|---|
@@ -296,10 +312,8 @@ print("Pence:", pence)
 # | Power | `**` |
 # | Modulo | `%` |
 # | Floor division | ``//`` |
-# 
-# ---
 
-# ## Decisions
+# ## `If` statement
 # The specific heat capacity of water depends on whether it is in a solid, liquid or gaseous state.
 # 
 # |State|Specific heat capacity (kJ/kgK)|
@@ -326,17 +340,36 @@ print("Specific heat capacity:", shc, "kJ/kgK")
 
 
 # The `if` statement evaluates the expression `temp > 100` and if it is true, executes the indented code directly underneath, then skips to the next statement after the `if-else` block. If it is not true, execution moves to the `elif` statement. If the expression `temp > 0` is true, the indented code beneath it is executed  and execution skips to the next statement after the `if-else` block. Finally, if neither expression is true, the indent code block below the `else` statement is executed.
-
-# ---
-# **NOTES**  
 # 
+# :::{note}
+# **`If` statement**
 # - Exactly one of the indented code blocks will be executed.
 # - Use the `tab` key to indent code by exactly four spaces.
 # - The `if`, `elif` and `else` statements must be followed by a colon (`:`).
 # - Note the unusual keyword `elif` (rather than `elseif`).
 # - The `elif` and `else` statements are optional.
+# :::
 # 
-# ---
+# :::{warning}
+# **Assignment vs Equality**  
+# 
+# `=` is the **assignment** operator. It assigns the value on the right to the variable on the left:
+# ```
+# x = 6 + 7 # sets x to the value 13
+# ```
+# 
+# `==` is the **equality** operator. It evaluates to `True` if the expression on the left is equal to the expression on the right.
+# ```
+# x == 13 # returns `True`
+# ```
+# 
+# The condition in an `if` statement should always use `==`. This is a common mistake:
+# 
+# ```
+# if x = 13: # this is a mistake. Be careful!
+#     print("yes")
+# ```
+# :::
 
 # ### Example
 # 
