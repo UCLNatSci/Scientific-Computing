@@ -2,8 +2,11 @@
 # coding: utf-8
 
 # # Lists and Plotting
+# 
+# TODO: Example of lists and plotting
+# 
 # ## Lists
-# A `list` is a Python data type that stores a sequence of values. For example, suppose we have the following data representing five years' population data for a species:
+# A `list` is a Python data type that stores a sequence of values. For example, suppose we have the following data representing five years' population data:
 
 # In[1]:
 

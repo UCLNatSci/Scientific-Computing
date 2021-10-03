@@ -58,7 +58,7 @@ greet("Prof Lonsdale")
 # 
 # - Python executes each line of code in the function in order.
 # 
-# - Once the interpreter reaches the final line of code in the function, execution returns to the main body of code and the line `greet("James Bond")` is executed. Execution moves to the `greet` function with `name = "Mr Bentham"`, and execution continues as described above.
+# - Once the interpreter reaches the final line of code in the function, execution returns to the main body of code and the line `greet("Mr Bentham")` is executed. Execution moves to the `greet` function with `name = "Mr Bentham"`, and execution continues as described above.
 
 # ## Defining Functions
 # 
@@ -114,6 +114,12 @@ print("Rectangle 2 perimeter:", x2)
 
 
 print("Total perimeter of rectangles:", calculate_perimeter(2, 4) +  calculate_perimeter(10, 10))
+
+
+# In[ ]:
+
+
+
 
 
 # :::{note}

@@ -104,7 +104,7 @@ z = np.arange(0, 1, 0.1)
 print(z)
 
 
-# ---
+# :::{note}
 # **PYTHON LISTS VS NUMPY ARRAYS**
 # 
 # |Python list|Numpy array|
@@ -114,8 +114,7 @@ print(z)
 # |Can store multiple data types (strings, floats, ints, other lists)|Can store only numerical data of a single type|
 # |Does not support vector operations|Supports vector operations|
 # |Slow|Fast|
-# 
-# ---
+# :::
 
 # ## Example: Sinusoidal Motion
 # The following equation describes the motion of a damped linear oscillator, where $t$ is time and $x$ is displacement.
@@ -314,17 +313,10 @@ ax_r.set_ylabel("velocity (m/s)")
 fig.legend()
 
 
-# ---
+# :::{note}
 # **Forward Euler Method**
 # 
 # This method of integrating differential equations is called the Forward Euler method. Faster and more accurate methods are also the available, such as the Runga-Kutta method. A variety of methods can be accessed by importing `scipy.integrate.odeint`.
+# :::
 # 
-# ---
 # 
-# 
-
-# In[ ]:
-
-
-
-

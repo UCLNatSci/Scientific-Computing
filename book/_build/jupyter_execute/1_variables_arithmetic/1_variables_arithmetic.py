@@ -180,11 +180,29 @@ print()
 print("***")
 
 
+# :::{note}
+# `print` is the first of many Python in-built functions that we will study.
+# 
+# You can find out more about Python functions by using the **`help()`** function. For example, we can see change the default seperator using `sep`
+# :::
+
+# In[11]:
+
+
+help(print)
+
+
+# In[12]:
+
+
+print("1", "2", "3", sep="-")
+
+
 # ## Errors
 # 
 # Python expects code to have a very specific format. For example, every open bracket '`(`' must have a matching closing bracket '`)`'. If there is an error in the code, python will generate an **error message**.
 
-# In[11]:
+# In[13]:
 
 
 print("***"

@@ -39,5 +39,5 @@
 {"cell_type":"markdown","id":"d0146b","input":"## Converting between strings and numbers\n\nFunctions `str`, `int` and `float` are available to convert between strings and other data types.","pos":6,"type":"cell"}
 {"cell_type":"markdown","id":"f72be2","input":"## String Methods\nA string is an **object**, which is a data type with **methods** directly attached with it which can be called similarly to calling a function. The  `upper` method returns a new string in upper case:","pos":9,"type":"cell"}
 {"cell_type":"markdown","id":"f9a436","input":"Use the `len` function to find the length of a string.","pos":19,"type":"cell"}
-{"id":0,"time":1631898328601,"type":"user"}
+{"id":0,"time":1632078931606,"type":"user"}
 {"last_load":1631898329669,"type":"file"}
