@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Functions and Loops &#8212; My sample book</title>
+    <title>Functions and Loops &#8212; Scientific Computing for Natural Sciences</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -69,10 +69,10 @@
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
-      <img src="../_static/logo.png" class="logo" alt="logo">
+      <img src="../_static/nsci0007_logo.png" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">My sample book</h1>
+      <h1 class="site-logo" id="site-title">Scientific Computing for Natural Sciences</h1>
       
     </a>
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
@@ -90,7 +90,7 @@
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_variables_arithmetic/1_variables_arithmetic.html">
-   Introduction to Python
+   Python Fundamentals
   </a>
  </li>
 </ul>
@@ -145,22 +145,6 @@
 
             <!-- Source interaction buttons -->
 
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F2_loops_functions/2_loops_functions.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        
-    </div>
-</div>
-
             <!-- Full screen (wrap in <a> to have style consistency -->
 
 <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
@@ -169,23 +153,6 @@
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/2_loops_functions/2_loops_functions.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
-                data-placement="left"><img class="binder-button-logo"
-                    src="../_static/images/logo_binder.svg"
-                    alt="Interact on binder">Binder</button></a>
-        
-        
-        
-        
-    </div>
-</div>
 
         </div>
 
@@ -253,6 +220,11 @@
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors">
+   Errors
+  </a>
  </li>
 </ul>
 
@@ -712,6 +684,46 @@ i = 4
 </div>
 </div>
 </div>
+<div class="section" id="errors">
+<h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<p>Python expects code to have a very specific format. For example, every open bracket ‘<code class="docutils literal notranslate"><span class="pre">(</span></code>‘ must have a matching closing bracket ‘<code class="docutils literal notranslate"><span class="pre">)</span></code>’. If there is an error in the code, python will generate an <strong>error message</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;***&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_3973/2048779763.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;***&quot;</span>
+               <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unexpected EOF while parsing
+</pre></div>
+</div>
+</div>
+</div>
+<p>The error message tells us that the error is on <code class="docutils literal notranslate"><span class="pre">line</span> <span class="pre">1</span></code> and that the type of error is <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>.</p>
+<p>This information can be very useful, especially in longer programs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;code&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;works)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;perfectly!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-13-c77efdeb2804&gt;&quot;</span><span class="gt">, line </span><span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;works)</span>
+                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: EOL while scanning string literal
+</pre></div>
+</div>
+</div>
+</div>
+<p>The error is on <code class="docutils literal notranslate"><span class="pre">line</span> <span class="pre">3</span></code>. To view line numbers change to command mode (press <code class="docutils literal notranslate"><span class="pre">Esc</span></code>) then press the <code class="docutils literal notranslate"><span class="pre">l</span></code> key. Now we can see that the error is on line 3 and we can fix it by putting in the missing quote symbol <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -752,7 +764,7 @@ i = 4
     <div class="container">
       <p>
         
-          By The Jupyter Book Community<br/>
+          By Natural Sciences<br/>
         
             &copy; Copyright 2021.<br/>
       </p>

@@ -3,8 +3,8 @@
 
 format: jb-book
 root: intro
-# chapters:
-# - file: 1_variables_arithmetic/1_variables_arithmetic.ipynb
+chapters:
+- file: 1_variables_arithmetic/1_variables_arithmetic.ipynb
 # - file: 2_loops_functions/2_loops_functions.ipynb
 # - file: 3_lists_plotting/3_lists_plotting.ipynb
 # - file: 4_strings/4_strings.ipynb

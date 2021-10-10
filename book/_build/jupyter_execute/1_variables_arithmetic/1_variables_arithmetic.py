@@ -1,8 +1,18 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Introduction to Python
+# # Python Fundamentals
 # 
+# Programming is all about breaking down a problem into simple steps that the computer can understand. In this case, the 'simple steps' are instructions, written in the Python programming language, which perform simple operations such as performing arithmetic calculations or setting the value of variables. These instructions are usually performed one at a time in sequence, although some instructions might cause the program to branch to a different section of code or to repeat a section of code. In this section we will introduce some of the most common Python constructs and some techniques to solve simple computational problems.
+# 
+# ```{admonition} What you'll learn
+#  - How to create variables
+#  - How to perform arithmetic calcuations
+#  - Displaying output using `print`
+#  - Branching using the `if` statement
+#  - Looping using the `while` statement
+#  - Using pseudocode to construct the solution to a problem
+# ```
 # ## Example
 # 
 # We'll start with a simple example of a Python program which simulates the growth in population of a colony of bacteria. Suppose we start with 100 cells and the population doubles every hour. How many hours will it take to reach a population of 10000 cells?
@@ -198,30 +208,27 @@ help(print)
 print("1", "2", "3", sep="-")
 
 
-# ## Errors
+# :::{admonition} Pseudocode
+# Pseudocode is a way to represent the solution to a programming problem in 'plain English', without worring about correct programming syntax. For example, suppose we have the following problem:
 # 
-# Python expects code to have a very specific format. For example, every open bracket '`(`' must have a matching closing bracket '`)`'. If there is an error in the code, python will generate an **error message**.
-
-# In[13]:
-
-
-print("***"
-
-
-# The error message tells us that the error is on `line 1` and that the type of error is `SyntaxError`.
+# > The value of a loan increases by 1.3% every month, except in December when it is reduced by 100 pounds. How many months will it take for a 1000 pound loan to reach 2000 pounds?
 # 
-# This information can be very useful, especially in longer programs.
-
-# In[13]:
-
-
-print("This")
-print("code")
-print("works)
-print("perfectly!")
-
-
-# The error is on `line 3`. To view line numbers change to command mode (press `Esc`) then press the `l` key. Now we can see that the error is on line 3 and we can fix it by putting in the missing quote symbol `"`.
+# We might write this in pseudo code as follows:
+# 
+# ```none
+# set loan to 1000  
+# set counter to 0  
+# repeat until loan is greater than 2000:
+#   if counter is divisble by 12:
+#     decrease loan by 100
+#   otherwise
+#     multiply loan by 1.013
+#   increase counter by 1
+# display value of counter
+# ```
+# 
+# By writing the pseudocode, we can establish the correct algorithm for the solution, before turning it into syntatically-correct Python code. There exist several 'standard' versions of pseudocode, although in this course I encourage you to write it in any way which makes sense to you!
+# :::
 
 # ## Number Types
 # 
@@ -239,7 +246,7 @@ print("perfectly!")
 # ## Arithmetic Operators
 # Python supports basic arithmetic operations addition, subtraction, multiplication and division using the symbols `+`, `-`, `*` and `/`. Brackets are used to indicate the order in which the parts of an expression are computed. For example, in the following expression, the division is performed first and then the addition.
 
-# In[8]:
+# In[13]:
 
 
 3 + 4 / 2
@@ -247,7 +254,7 @@ print("perfectly!")
 
 # In order to compute $\frac{3 + 4}{2}$, use brackets:
 
-# In[9]:
+# In[14]:
 
 
 (3 + 4) / 2
@@ -255,7 +262,7 @@ print("perfectly!")
 
 # In order to calculate powers, use the `**` operator. For example, the following calculates the $8^3$:
 
-# In[10]:
+# In[15]:
 
 
 8 ** 3
@@ -265,7 +272,7 @@ print("perfectly!")
 # 
 # Using the `/` operator results in a float-point value:
 
-# In[11]:
+# In[16]:
 
 
 9 / 4
@@ -273,7 +280,7 @@ print("perfectly!")
 
 # On the other hand, the `//` operator performs **floor division**, computing the quotient and discarding the fractional part:
 
-# In[12]:
+# In[17]:
 
 
 9 // 4
@@ -281,7 +288,7 @@ print("perfectly!")
 
 # To calculate the remainder after floor division, use the **modulus** operator `%`:
 
-# In[13]:
+# In[18]:
 
 
 9 % 4
@@ -290,7 +297,7 @@ print("perfectly!")
 # ### Example 1
 # The `%` operator is useful to determine if a variable is divisible by a number. For example, if a number is even its remainder after dividing by 2 is zero; if it is odd its remainder after dividing by 2 is 1:
 
-# In[14]:
+# In[19]:
 
 
 x = 5
@@ -302,7 +309,7 @@ print(x % 2)
 # ### Example 2
 # Suppose we have 1234 pennies in the piggy-bank. How much do we have in pounds and pence? First we divide by 100 to get the while number of pounds:
 
-# In[15]:
+# In[20]:
 
 
 num_pennies = 1234
@@ -312,7 +319,7 @@ print("Pounds:", pounds)
 
 # Next we use the `%` operator to find the number of pence:
 
-# In[16]:
+# In[21]:
 
 
 pence = num_pennies % 100
@@ -342,7 +349,7 @@ print("Pence:", pence)
 # 
 # Let's write code which, given the temperature of a water sample, sets the value of the variable `shc` to the appropriate value (of course, we need to know the melting and boiling points of water!)
 
-# In[17]:
+# In[22]:
 
 
 temp = 90 # temperature of water sample
@@ -395,7 +402,7 @@ print("Specific heat capacity:", shc, "kJ/kgK")
 # 
 # Note that we use the operator `==` to check for equality.
 
-# In[18]:
+# In[23]:
 
 
 x = 53783

@@ -333,3 +333,28 @@ print("Number of w's:", counter)
 # :::{note}
 # Strings are not equal if they are of a different case, so `"W" == "w"` is not true
 # ::::
+
+# ## Errors
+# 
+# Python expects code to have a very specific format. For example, every open bracket '`(`' must have a matching closing bracket '`)`'. If there is an error in the code, python will generate an **error message**.
+
+# In[18]:
+
+
+print("***"
+
+
+# The error message tells us that the error is on `line 1` and that the type of error is `SyntaxError`.
+# 
+# This information can be very useful, especially in longer programs.
+
+# In[13]:
+
+
+print("This")
+print("code")
+print("works)
+print("perfectly!")
+
+
+# The error is on `line 3`. To view line numbers change to command mode (press `Esc`) then press the `l` key. Now we can see that the error is on line 3 and we can fix it by putting in the missing quote symbol `"`.
