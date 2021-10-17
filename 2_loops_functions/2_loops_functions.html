@@ -51,6 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Python Fundamentals" href="../1_variables_arithmetic/1_variables_arithmetic.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -87,10 +88,15 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_variables_arithmetic/1_variables_arithmetic.html">
    Python Fundamentals
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Functions and Loops
   </a>
  </li>
 </ul>
@@ -185,18 +191,23 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#testing-functions">
+   Testing Functions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#loops">
    Loops
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#while-loop">
+  <a class="reference internal nav-link" href="#while-loops">
    <code class="docutils literal notranslate">
     <span class="pre">
      while
     </span>
    </code>
-   Loop
+   Loops
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
@@ -205,8 +216,18 @@
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#boolean-variables">
+   Boolean Variables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#for-loops">
-   For Loops
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     for
+    </span>
+   </code>
+   Loops
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
@@ -214,17 +235,7 @@
      Nested Loops
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#string-iteration">
-     String Iteration
-    </a>
-   </li>
   </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#errors">
-   Errors
-  </a>
  </li>
 </ul>
 
@@ -239,9 +250,20 @@
                 
   <div class="section" id="functions-and-loops">
 <h1>Functions and Loops<a class="headerlink" href="#functions-and-loops" title="Permalink to this headline">¶</a></h1>
+<div class="admonition-what-you-ll-learn admonition">
+<p class="admonition-title">What you’ll learn</p>
+<ul class="simple">
+<li><p>How to split up a problem into smaller parts using functions</p></li>
+<li><p>How to define and call functions</p></li>
+<li><p>How to test functions</p></li>
+<li><p>How to repeat code using <code class="docutils literal notranslate"><span class="pre">while</span></code> and <code class="docutils literal notranslate"><span class="pre">for</span></code> loops</p></li>
+<li><p>Relational operators</p></li>
+<li><p>Boolean variables</p></li>
+</ul>
+</div>
 <div class="section" id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h2>
-<p>A function is a group of related statements that performs a specific task. With the help of Functions, we can break our program into smaller and modular chunks. So, as we start to write larger programs, functions help us to make it more organized and manageable.</p>
+<p>A function is a group of related statements that performs a specific task. With the help of functions, we can break our program into smaller and modular chunks. So, as we start to write larger programs, functions help us to make it more organized and manageable.</p>
 <p>Furthermore, with the help of function, we can avoid repetition and make our code reusable. Let’s start with a very simple example.</p>
 <p>The following code sets the variable <code class="docutils literal notranslate"><span class="pre">name1</span></code> then prints a simple greeting message:</p>
 <div class="cell docutils container">
@@ -488,17 +510,29 @@ Rectangle 2 perimeter: 40
 </div>
 </div>
 <p>Aha! We forgot to subtract 1 to change from 1-based indexing to 0-based indexing. In one of the practice exercises, you will fix the error.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+</div>
+<div class="section" id="testing-functions">
+<h2>Testing Functions<a class="headerlink" href="#testing-functions" title="Permalink to this headline">¶</a></h2>
 <p>By splitting the problem into small functions, we were able to test each part separately, and easily identify where the error was. This is one of the key benefits of using functions.</p>
+<p>A common techniques is called test-first development, where the tests are written <em>before</em> writing the function.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">highest_common_factor</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="c1"># replace this line with the function contents</span>
+    <span class="k">pass</span>
+    
+<span class="c1"># should print 3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">highest_common_factor</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+
+<span class="c1"># should print 5</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">highest_common_factor</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+</pre></div>
 </div>
 </div>
 <div class="section" id="loops">
 <h2>Loops<a class="headerlink" href="#loops" title="Permalink to this headline">¶</a></h2>
 <p>A <strong>loop</strong> is a sequence of instructions which is executed repeatedly until a goal is reached. We’ve already seen the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop which repeats a code block while a condition is true.</p>
 </div>
-<div class="section" id="while-loop">
-<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> Loop<a class="headerlink" href="#while-loop" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="while-loops">
+<h2><code class="docutils literal notranslate"><span class="pre">while</span></code> Loops<a class="headerlink" href="#while-loops" title="Permalink to this headline">¶</a></h2>
 <p>In Python we use a <code class="docutils literal notranslate"><span class="pre">while</span></code> statement to repeat a sequence of statements while a specific condition is satisfied.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -561,8 +595,27 @@ Rectangle 2 perimeter: 40
 <p>It is very easy to make a mistake by choosing the wrong operator. For example, if we replaced <code class="docutils literal notranslate"><span class="pre">pop</span> <span class="pre">&lt;</span> <span class="pre">1000</span></code> with <code class="docutils literal notranslate"><span class="pre">pop</span> <span class="pre">&gt;</span> <span class="pre">1000</span></code> in the above code, the <code class="docutils literal notranslate"><span class="pre">while</span></code> loop is never entered since the condition is false on the first iteration.</p>
 </div>
 </div>
+<div class="section" id="boolean-variables">
+<h2>Boolean Variables<a class="headerlink" href="#boolean-variables" title="Permalink to this headline">¶</a></h2>
+<p>We can assign the result of a relational operation to a variable. Such a variable has the value <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code> and is called a <strong>Boolean Variable</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">6</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s2">&quot;is greater than&quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s2">&quot;:&quot;</span><span class="p">,</span>  <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5 is greater than 6 : False
+</pre></div>
+</div>
+</div>
+</div>
+</div>
 <div class="section" id="for-loops">
-<h2>For Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h2>
+<h2><code class="docutils literal notranslate"><span class="pre">for</span></code> Loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h2>
 <p>A <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is used to iterate over a sequence of elements. The simplest form of the <code class="docutils literal notranslate"><span class="pre">for</span></code> statement is to iterate over a range of integer values. For example, the following code will execute the indented statements once for each integer from 5 to 9:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -655,74 +708,6 @@ i = 4
 <p>To avoid this, and use <code class="docutils literal notranslate"><span class="pre">print(&quot;text&quot;,</span> <span class="pre">end=&quot;&quot;)</span></code>.</p>
 </div>
 </div>
-<div class="section" id="string-iteration">
-<h3>String Iteration<a class="headerlink" href="#string-iteration" title="Permalink to this headline">¶</a></h3>
-<p>A for loop can be used to iterate over any container data type. Container data types include lists, which will be introduced next week, as well as strings, we will be explored further the following week. For now, just note that a string consists of a sequence of characters, and therefore it is possible to iterate over it using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
-<p>We can use this to count characters in a string. For example, how many w’s are there in this sentence?</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;We can use this to count characters in a string. For example, how many w&#39;s are there in this sentence?&quot;</span>
-
-<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Set the counter to zero</span>
-<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span> <span class="c1"># Loop over each character in the text</span>
-    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span> <span class="c1"># Check if the character is &quot;w&quot;</span>
-        <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># If so, increase the counter</span>
-        
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of w&#39;s:&quot;</span><span class="p">,</span> <span class="n">counter</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of w&#39;s: 2
-</pre></div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Strings are not equal if they are of a different case, so <code class="docutils literal notranslate"><span class="pre">&quot;W&quot;</span> <span class="pre">==</span> <span class="pre">&quot;w&quot;</span></code> is not true</p>
-</div>
-</div>
-</div>
-<div class="section" id="errors">
-<h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
-<p>Python expects code to have a very specific format. For example, every open bracket ‘<code class="docutils literal notranslate"><span class="pre">(</span></code>‘ must have a matching closing bracket ‘<code class="docutils literal notranslate"><span class="pre">)</span></code>’. If there is an error in the code, python will generate an <strong>error message</strong>.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;***&quot;</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_3973/2048779763.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;***&quot;</span>
-               <span class="o">^</span>
-<span class="ne">SyntaxError</span>: unexpected EOF while parsing
-</pre></div>
-</div>
-</div>
-</div>
-<p>The error message tells us that the error is on <code class="docutils literal notranslate"><span class="pre">line</span> <span class="pre">1</span></code> and that the type of error is <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>.</p>
-<p>This information can be very useful, especially in longer programs.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;code&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;works)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;perfectly!&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-13-c77efdeb2804&gt;&quot;</span><span class="gt">, line </span><span class="mi">3</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;works)</span>
-                 <span class="o">^</span>
-<span class="ne">SyntaxError</span>: EOL while scanning string literal
-</pre></div>
-</div>
-</div>
-</div>
-<p>The error is on <code class="docutils literal notranslate"><span class="pre">line</span> <span class="pre">3</span></code>. To view line numbers change to command mode (press <code class="docutils literal notranslate"><span class="pre">Esc</span></code>) then press the <code class="docutils literal notranslate"><span class="pre">l</span></code> key. Now we can see that the error is on line 3 and we can fix it by putting in the missing quote symbol <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.</p>
 </div>
 </div>
 
@@ -755,6 +740,15 @@ i = 4
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="../1_variables_arithmetic/1_variables_arithmetic.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Python Fundamentals</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         

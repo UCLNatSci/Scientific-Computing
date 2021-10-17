@@ -93,6 +93,11 @@
    Python Fundamentals
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../2_loops_functions/2_loops_functions.html">
+   Functions and Loops
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -187,6 +192,16 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#plotting-using-matplotlib">
    Plotting using Matplotlib
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#string-iteration">
+   String Iteration
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#errors">
+   Errors
   </a>
  </li>
 </ul>
@@ -439,7 +454,7 @@ Population: 206
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3993</span><span class="o">/</span><span class="mf">1475974717.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2700</span><span class="o">/</span><span class="mf">1475974717.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># create figure of size 4 by 4 inches</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># plot a line graph</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span> <span class="c1"># add an x-axis label</span>
@@ -454,6 +469,74 @@ Population: 206
 </div>
 </div>
 </div>
+</div>
+<div class="section" id="string-iteration">
+<h2>String Iteration<a class="headerlink" href="#string-iteration" title="Permalink to this headline">¶</a></h2>
+<p>A for loop can be used to iterate over any container data type. Container data types include lists, which will be introduced next week, as well as strings, we will be explored further the following week. For now, just note that a string consists of a sequence of characters, and therefore it is possible to iterate over it using a <code class="docutils literal notranslate"><span class="pre">for</span></code> loop.</p>
+<p>We can use this to count characters in a string. For example, how many w’s are there in this sentence?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;We can use this to count characters in a string. For example, how many w&#39;s are there in this sentence?&quot;</span>
+
+<span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span> <span class="c1"># Set the counter to zero</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">text</span><span class="p">:</span> <span class="c1"># Loop over each character in the text</span>
+    <span class="k">if</span> <span class="n">c</span> <span class="o">==</span> <span class="s2">&quot;w&quot;</span><span class="p">:</span> <span class="c1"># Check if the character is &quot;w&quot;</span>
+        <span class="n">counter</span> <span class="o">=</span> <span class="n">counter</span> <span class="o">+</span> <span class="mi">1</span> <span class="c1"># If so, increase the counter</span>
+        
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Number of w&#39;s:&quot;</span><span class="p">,</span> <span class="n">counter</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Number of w&#39;s: 2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Strings are not equal if they are of a different case, so <code class="docutils literal notranslate"><span class="pre">&quot;W&quot;</span> <span class="pre">==</span> <span class="pre">&quot;w&quot;</span></code> is not true</p>
+</div>
+</div>
+<div class="section" id="errors">
+<h2>Errors<a class="headerlink" href="#errors" title="Permalink to this headline">¶</a></h2>
+<p>Python expects code to have a very specific format. For example, every open bracket ‘<code class="docutils literal notranslate"><span class="pre">(</span></code>‘ must have a matching closing bracket ‘<code class="docutils literal notranslate"><span class="pre">)</span></code>’. If there is an error in the code, python will generate an <strong>error message</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;***&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-11-dbc91aa2e2ab&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;***&quot;</span>
+               <span class="o">^</span>
+<span class="ne">SyntaxError</span>: unexpected EOF while parsing
+</pre></div>
+</div>
+</div>
+</div>
+<p>The error message tells us that the error is on <code class="docutils literal notranslate"><span class="pre">line</span> <span class="pre">1</span></code> and that the type of error is <code class="docutils literal notranslate"><span class="pre">SyntaxError</span></code>.</p>
+<p>This information can be very useful, especially in longer programs.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;This&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;code&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;works)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;perfectly!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-13-c77efdeb2804&gt;&quot;</span><span class="gt">, line </span><span class="mi">3</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;works)</span>
+                 <span class="o">^</span>
+<span class="ne">SyntaxError</span>: EOL while scanning string literal
+</pre></div>
+</div>
+</div>
+</div>
+<p>The error is on <code class="docutils literal notranslate"><span class="pre">line</span> <span class="pre">3</span></code>. To view line numbers change to command mode (press <code class="docutils literal notranslate"><span class="pre">Esc</span></code>) then press the <code class="docutils literal notranslate"><span class="pre">l</span></code> key. Now we can see that the error is on line 3 and we can fix it by putting in the missing quote symbol <code class="docutils literal notranslate"><span class="pre">&quot;</span></code>.</p>
 </div>
 </div>
 
