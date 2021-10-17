@@ -152,3 +152,56 @@ plt.xlabel("Time (s)") # add an x-axis label
 plt.ylabel("Distance (m)") # add a y-axis label
 plt.title("Particle Position") # add a figure title
 
+
+# ## String Iteration
+# A for loop can be used to iterate over any container data type. Container data types include lists, which will be introduced next week, as well as strings, we will be explored further the following week. For now, just note that a string consists of a sequence of characters, and therefore it is possible to iterate over it using a `for` loop.  
+# 
+# We can use this to count characters in a string. For example, how many w's are there in this sentence?
+
+# In[2]:
+
+
+text = "We can use this to count characters in a string. For example, how many w's are there in this sentence?"
+
+counter = 0 # Set the counter to zero
+for c in text: # Loop over each character in the text
+    if c == "w": # Check if the character is "w"
+        counter = counter + 1 # If so, increase the counter
+        
+print("Number of w's:", counter)
+
+
+# :::{note}
+# Strings are not equal if they are of a different case, so `"W" == "w"` is not true
+# ::::
+
+# ## Errors
+# 
+# Python expects code to have a very specific format. For example, every open bracket '`(`' must have a matching closing bracket '`)`'. If there is an error in the code, python will generate an **error message**.
+
+# In[11]:
+
+
+print("***"
+
+
+# The error message tells us that the error is on `line 1` and that the type of error is `SyntaxError`.
+# 
+# This information can be very useful, especially in longer programs.
+
+# In[13]:
+
+
+print("This")
+print("code")
+print("works)
+print("perfectly!")
+
+
+# The error is on `line 3`. To view line numbers change to command mode (press `Esc`) then press the `l` key. Now we can see that the error is on line 3 and we can fix it by putting in the missing quote symbol `"`.
+
+# In[ ]:
+
+
+
+

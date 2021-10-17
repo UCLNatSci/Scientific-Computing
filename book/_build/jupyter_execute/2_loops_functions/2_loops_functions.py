@@ -1,11 +1,26 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# In[ ]:
+
+
+
+
+
 # # Functions and Loops
+# 
+# ```{admonition} What you'll learn
+#  - How to split up a problem into smaller parts using functions
+#  - How to define and call functions
+#  - How to test functions
+#  - How to repeat code using `while` and `for` loops
+#  - Relational operators
+#  - Boolean variables
+# ```
 # 
 # ## Functions
 # 
-# A function is a group of related statements that performs a specific task. With the help of Functions, we can break our program into smaller and modular chunks. So, as we start to write larger programs, functions help us to make it more organized and manageable.
+# A function is a group of related statements that performs a specific task. With the help of functions, we can break our program into smaller and modular chunks. So, as we start to write larger programs, functions help us to make it more organized and manageable.
 # 
 # Furthermore, with the help of function, we can avoid repetition and make our code reusable. Let's start with a very simple example.
 # 
@@ -210,16 +225,30 @@ get_number_of_day(1)
 
 # Aha! We forgot to subtract 1 to change from 1-based indexing to 0-based indexing. In one of the practice exercises, you will fix the error.
 # 
-# :::{note}
+# ## Testing Functions
+# 
 # By splitting the problem into small functions, we were able to test each part separately, and easily identify where the error was. This is one of the key benefits of using functions.
-# :::
+# 
+# A common techniques is called test-first development, where the tests are written *before* writing the function. 
+# 
+# ```
+# def highest_common_factor(a, b):
+#     # replace this line with the function contents
+#     pass
+#     
+# # should print 3
+# print(highest_common_factor(6, 3))
+# 
+# # should print 5
+# print(highest_common_factor(5, 5))
+# ```
 # 
 
 # ## Loops
 # 
 # A **loop** is a sequence of instructions which is executed repeatedly until a goal is reached. We've already seen the `while` loop which repeats a code block while a condition is true.
 # 
-# ## `while` Loop
+# ## `while` Loops
 # 
 # In Python we use a `while` statement to repeat a sequence of statements while a specific condition is satisfied.
 
@@ -255,13 +284,27 @@ print("Number of years:", year)
 # :::{warning}
 # It is very easy to make a mistake by choosing the wrong operator. For example, if we replaced `pop < 1000` with `pop > 1000` in the above code, the `while` loop is never entered since the condition is false on the first iteration.
 # :::
+# 
+# ## Boolean Variables
+# 
+# We can assign the result of a relational operation to a variable. Such a variable has the value `True` or `False` and is called a **Boolean Variable**.
+# 
 
-# ## For Loops
+# In[13]:
+
+
+x = 5
+y = 6
+z = x > y
+print(x, "is greater than", y, ":",  z)
+
+
+# ## `for` Loops
 # 
 # A `for` loop is used to iterate over a sequence of elements. The simplest form of the `for` statement is to iterate over a range of integer values. For example, the following code will execute the indented statements once for each integer from 5 to 9:
 # 
 
-# In[13]:
+# In[14]:
 
 
 for i in range(5, 10):
@@ -271,7 +314,7 @@ for i in range(5, 10):
 # The `range` function specifies the sequence of integer values that the loop variable will take. `range(a, b)` generates a sequence starting at `a` and ending at `b - 1`.  
 # To generate a sequence with a different step size, pass a third argument to the `range` function:
 
-# In[14]:
+# In[15]:
 
 
 for i in range(1, 10, 2):
@@ -280,7 +323,7 @@ for i in range(1, 10, 2):
 
 # You can use the range function with a single argument, in which case the range of values starts at zero:
 
-# In[15]:
+# In[16]:
 
 
 for i in range(5):
@@ -297,7 +340,7 @@ for i in range(5):
 # ### Nested Loops
 # For loops may be **nested** by placing one inside another. The following example repeats in the inner loop 4 times for each of the out loop, resulting in a total of 20 iterations,.
 
-# In[16]:
+# In[17]:
 
 
 for i in range(5):
@@ -311,50 +354,3 @@ for i in range(5):
 # 
 # To avoid this, and use `print("text", end="")`.
 # :::
-# 
-# ### String Iteration
-# A for loop can be used to iterate over any container data type. Container data types include lists, which will be introduced next week, as well as strings, we will be explored further the following week. For now, just note that a string consists of a sequence of characters, and therefore it is possible to iterate over it using a `for` loop.  
-# 
-# We can use this to count characters in a string. For example, how many w's are there in this sentence?
-
-# In[17]:
-
-
-text = "We can use this to count characters in a string. For example, how many w's are there in this sentence?"
-
-counter = 0 # Set the counter to zero
-for c in text: # Loop over each character in the text
-    if c == "w": # Check if the character is "w"
-        counter = counter + 1 # If so, increase the counter
-        
-print("Number of w's:", counter)
-
-
-# :::{note}
-# Strings are not equal if they are of a different case, so `"W" == "w"` is not true
-# ::::
-
-# ## Errors
-# 
-# Python expects code to have a very specific format. For example, every open bracket '`(`' must have a matching closing bracket '`)`'. If there is an error in the code, python will generate an **error message**.
-
-# In[18]:
-
-
-print("***"
-
-
-# The error message tells us that the error is on `line 1` and that the type of error is `SyntaxError`.
-# 
-# This information can be very useful, especially in longer programs.
-
-# In[13]:
-
-
-print("This")
-print("code")
-print("works)
-print("perfectly!")
-
-
-# The error is on `line 3`. To view line numbers change to command mode (press `Esc`) then press the `l` key. Now we can see that the error is on line 3 and we can fix it by putting in the missing quote symbol `"`.

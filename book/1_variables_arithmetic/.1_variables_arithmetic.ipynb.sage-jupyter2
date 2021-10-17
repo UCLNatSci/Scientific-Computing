@@ -51,5 +51,5 @@
 {"cell_type":"markdown","id":"e9c446","input":"In order to calculate powers, use the `**` operator. For example, the following calculates the $8^3$:","pos":32,"type":"cell"}
 {"cell_type":"markdown","id":"fb70c6","input":"## Arithmetic Operators\nPython supports basic arithmetic operations addition, subtraction, multiplication and division using the symbols `+`, `-`, `*` and `/`. Brackets are used to indicate the order in which the parts of an expression are computed. For example, in the following expression, the division is performed first and then the addition.","pos":28,"type":"cell"}
 {"cell_type":"markdown","id":"fc2e6d","input":"### Example\n\nThe following example checks if the number `x` is divisible by 2, and prints an appropriate message.\n\nNote that we use the operator `==` to check for equality.","pos":50,"type":"cell"}
-{"id":0,"time":1633691587983,"type":"user"}
-{"last_load":1633902641549,"type":"file"}
+{"id":0,"time":1634486647946,"type":"user"}
+{"last_load":1634486648979,"type":"file"}
