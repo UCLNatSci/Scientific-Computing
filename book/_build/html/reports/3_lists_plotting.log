@@ -17,22 +17,13 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-plt.figure(figsize=(4,4)) # create figure of size 4 by 4 inches
-plt.plot(x, y) # plot a line graph
-plt.xlabel("Time (s)") # add an x-axis label
-plt.ylabel("Distance (m)") # add a y-axis label
-plt.title("Particle Position") # add a figure title
+print("***"
 ------------------
 
-[0;31m---------------------------------------------------------------------------[0m
-[0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2700/1475974717.py[0m in [0;36m<module>[0;34m[0m
-[1;32m      1[0m [0mplt[0m[0;34m.[0m[0mfigure[0m[0;34m([0m[0mfigsize[0m[0;34m=[0m[0;34m([0m[0;36m4[0m[0;34m,[0m[0;36m4[0m[0;34m)[0m[0;34m)[0m [0;31m# create figure of size 4 by 4 inches[0m[0;34m[0m[0;34m[0m[0m
-[0;32m----> 2[0;31m [0mplt[0m[0;34m.[0m[0mplot[0m[0;34m([0m[0mx[0m[0;34m,[0m [0my[0m[0;34m)[0m [0;31m# plot a line graph[0m[0;34m[0m[0;34m[0m[0m
-[0m[1;32m      3[0m [0mplt[0m[0;34m.[0m[0mxlabel[0m[0;34m([0m[0;34m"Time (s)"[0m[0;34m)[0m [0;31m# add an x-axis label[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      4[0m [0mplt[0m[0;34m.[0m[0mylabel[0m[0;34m([0m[0;34m"Distance (m)"[0m[0;34m)[0m [0;31m# add a y-axis label[0m[0;34m[0m[0;34m[0m[0m
-[1;32m      5[0m [0mplt[0m[0;34m.[0m[0mtitle[0m[0;34m([0m[0;34m"Particle Position"[0m[0;34m)[0m [0;31m# add a figure title[0m[0;34m[0m[0;34m[0m[0m
+[0;36m  File [0;32m"/tmp/ipykernel_4024/2048779763.py"[0;36m, line [0;32m1[0m
+[0;31m    print("***"[0m
+[0m               ^[0m
+[0;31mSyntaxError[0m[0;31m:[0m unexpected EOF while parsing
 
-[0;31mNameError[0m: name 'y' is not defined
-NameError: name 'y' is not defined
+SyntaxError: unexpected EOF while parsing (2048779763.py, line 1)
 

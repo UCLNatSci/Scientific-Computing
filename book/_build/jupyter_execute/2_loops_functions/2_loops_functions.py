@@ -1,15 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
-
-
-
-
-
 # # Functions and Loops
 # 
 # ```{admonition} What you'll learn
+# :class: tip
 #  - How to split up a problem into smaller parts using functions
 #  - How to define and call functions
 #  - How to test functions

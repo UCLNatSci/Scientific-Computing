@@ -22,7 +22,7 @@ id = last_name + 55
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mNameError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_2720/1020323969.py[0m in [0;36m<module>[0;34m[0m
+[0;32m/tmp/ipykernel_3847/1020323969.py[0m in [0;36m<module>[0;34m[0m
 [0;32m----> 1[0;31m [0mid[0m [0;34m=[0m [0mlast_name[0m [0;34m+[0m [0;36m55[0m[0;34m[0m[0;34m[0m[0m
 [0m
 [0;31mNameError[0m: name 'last_name' is not defined
