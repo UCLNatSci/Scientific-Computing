@@ -51,6 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Functions and Loops" href="../2_loops_functions/2_loops_functions.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -87,7 +88,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_variables_arithmetic/1_variables_arithmetic.html">
    Python Fundamentals
@@ -96,6 +97,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../2_loops_functions/2_loops_functions.html">
    Functions and Loops
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Lists and Plotting
   </a>
  </li>
 </ul>
@@ -170,6 +176,11 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example">
+   Example
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lists">
    Lists
   </a>
@@ -217,7 +228,63 @@
                 
   <div class="section" id="lists-and-plotting">
 <h1>Lists and Plotting<a class="headerlink" href="#lists-and-plotting" title="Permalink to this headline">¶</a></h1>
-<p>TODO: Example of lists and plotting</p>
+<div class="tip admonition">
+<p class="admonition-title">What you’ll learn</p>
+<ul class="simple">
+<li><p>How to store a sequence of data in a <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
+<li><p>How to traverse lists</p></li>
+<li><p>How to add and remove elements</p></li>
+<li><p>How find elements</p></li>
+<li><p>Plotting graphs using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code></p></li>
+</ul>
+</div>
+<div class="section" id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h2>
+<p>Recall in week one we simulated the exponential growth of a population of bacteria. We were able to predict the size of the population at any time by iteratively applying a growth rule (in this case, multiplication by a constant factor).</p>
+<p>In the example below, we do the same simulation, except this time we keep track of the population at every time point by storing it in a <code class="docutils literal notranslate"><span class="pre">list</span></code>. Furthermore, we then use a Python library called <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> to plot the results as a line graph.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">pop</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">r</span> <span class="o">=</span> <span class="mf">1.1</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="n">pop_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">pop</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">pop</span> <span class="o">=</span> <span class="n">pop</span> <span class="o">*</span> <span class="n">r</span>
+    <span class="n">pop_list</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pop</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">pop_list</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pop_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[100, 110.00000000000001, 121.00000000000003, 133.10000000000005, 146.41000000000008, 161.0510000000001, 177.15610000000012, 194.87171000000015, 214.3588810000002, 235.79476910000022, 259.37424601000026, 285.3116706110003, 313.84283767210036, 345.2271214393104, 379.74983358324147, 417.7248169415656, 459.49729863572225, 505.4470284992945, 555.991731349224, 611.5909044841464, 672.7499949325611]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f85c39dcb80&gt;]
+</pre></div>
+</div>
+<img alt="../_images/3_lists_plotting_1_2.png" src="../_images/3_lists_plotting_1_2.png" />
+</div>
+</div>
+<p>There are three new concepts here that we will explore in more detail. Firstly, we import a library called <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> which contains plotting functions:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+<p>Secondly, we use a new data type called a <code class="docutils literal notranslate"><span class="pre">list</span></code> which allows us to store a sequence of values:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pop_list</span> <span class="o">=</span> <span class="p">[</span><span class="n">pop</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Thirdly, we use the imported <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> library to plot a graph:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pop_list</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="lists">
 <h2>Lists<a class="headerlink" href="#lists" title="Permalink to this headline">¶</a></h2>
 <p>A <code class="docutils literal notranslate"><span class="pre">list</span></code> is a Python data type that stores a sequence of values. For example, suppose we have the following data representing five years’ population data:</p>
@@ -444,7 +511,7 @@ Population: 206
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># create figure of size 4 by 4 inches</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># plot a line graph</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">dis</span><span class="p">)</span> <span class="c1"># plot a line graph</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span> <span class="c1"># add an x-axis label</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Distance (m)&quot;</span><span class="p">)</span> <span class="c1"># add a y-axis label</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Particle Position&quot;</span><span class="p">)</span> <span class="c1"># add a figure title</span>
@@ -452,21 +519,10 @@ Population: 206
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2700</span><span class="o">/</span><span class="mf">1475974717.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span> <span class="c1"># create figure of size 4 by 4 inches</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="c1"># plot a line graph</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Time (s)&quot;</span><span class="p">)</span> <span class="c1"># add an x-axis label</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Distance (m)&quot;</span><span class="p">)</span> <span class="c1"># add a y-axis label</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Particle Position&quot;</span><span class="p">)</span> <span class="c1"># add a figure title</span>
-
-<span class="ne">NameError</span>: name &#39;y&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;Particle Position&#39;)
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 288x288 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../_images/3_lists_plotting_27_1.png" src="../_images/3_lists_plotting_27_1.png" />
 </div>
 </div>
 </div>
@@ -508,7 +564,7 @@ Population: 206
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-11-dbc91aa2e2ab&gt;&quot;</span><span class="gt">, line </span><span class="mi">1</span>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_4024/2048779763.py&quot;</span><span class="gt">, line </span><span class="mi">1</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;***&quot;</span>
                <span class="o">^</span>
 <span class="ne">SyntaxError</span>: unexpected EOF while parsing
@@ -569,6 +625,15 @@ Population: 206
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="../2_loops_functions/2_loops_functions.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Functions and Loops</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         
