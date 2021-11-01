@@ -51,6 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Lists and Plotting" href="../3_lists_plotting/3_lists_plotting.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -87,7 +88,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_variables_arithmetic/1_variables_arithmetic.html">
    Python Fundamentals
@@ -101,6 +102,11 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../3_lists_plotting/3_lists_plotting.html">
    Lists and Plotting
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Strings
   </a>
  </li>
 </ul>
@@ -175,6 +181,11 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#example-rna-sequences">
+   Example: RNA Sequences
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#string-variables">
    String Variables
   </a>
@@ -232,6 +243,169 @@
                 
   <div class="section" id="strings">
 <h1>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">¶</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">What you’ll learn</p>
+<ul class="simple">
+<li><p>How to store a sequence of character data in a string</p></li>
+<li><p>How to extract substrings by slicing</p></li>
+<li><p>How to use string methods</p></li>
+</ul>
+</div>
+<div class="section" id="example-rna-sequences">
+<h2>Example: RNA Sequences<a class="headerlink" href="#example-rna-sequences" title="Permalink to this headline">¶</a></h2>
+<p>In biology, an RNA sequence consists of a chain of the nucleotides Adenine, Uracil, Cytosine and Guanine in a specific order. We can represent an RNA sequence using the four letters <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">U</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code> and <code class="docutils literal notranslate"><span class="pre">G</span></code>.</p>
+<div class="figure align-default" id="rna-sequence">
+<img alt="../_images/rna.png" src="../_images/rna.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">An RNA sequence represented by the string <code class="docutils literal notranslate"><span class="pre">AUGAGACUCUGAGAC</span></code>. The sequence is composed of three-character subsequences called codons, each of which identifies a specific amino acid.</span><a class="headerlink" href="#rna-sequence" title="Permalink to this image">¶</a></p>
+</div>
+<div class="sidebar">
+<p class="sidebar-title">Amino Acid Translation Table</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Amino Acid</p></th>
+<th class="head"><p></p></th>
+<th class="head"><p>codons</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Leucine</p></td>
+<td><p>L</p></td>
+<td><p>UUA, UUG, CUU, CUC, CUA, CUG</p></td>
+</tr>
+<tr class="row-odd"><td><p>Methionine</p></td>
+<td><p>M</p></td>
+<td><p>AUG</p></td>
+</tr>
+<tr class="row-even"><td><p>Arginine</p></td>
+<td><p>R</p></td>
+<td><p>AGA, AGG, CGA, CGU, CGG, CGC</p></td>
+</tr>
+<tr class="row-odd"><td><p>Aspartic Acid</p></td>
+<td><p>D</p></td>
+<td><p>GAU, GAC</p></td>
+</tr>
+<tr class="row-even"><td><p>(stop)</p></td>
+<td><p>.</p></td>
+<td><p>UGA</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In the body, the RNA sequence is used to produce a protein in a process called translation. The sequence is first divided into three character subsequences termed ‘codons’. For example, the 15 character RNA sequence <code class="docutils literal notranslate"><span class="pre">AUGAGACUCUGAGAC</span></code> is divided into the codons <code class="docutils literal notranslate"><span class="pre">AUG</span></code>, <code class="docutils literal notranslate"><span class="pre">AGA</span></code>, <code class="docutils literal notranslate"><span class="pre">CUC</span></code>, <code class="docutils literal notranslate"><span class="pre">UGA</span></code>, and <code class="docutils literal notranslate"><span class="pre">GAC</span></code>.</p>
+<p>Each of the codons identifies a specific amino acid, as shown in the partial amino acid translation table on the right. The RNA sequence <code class="docutils literal notranslate"><span class="pre">AUGAGACUCUGAGAC</span></code> would therefore be translated by the body into the amino acid sequence <code class="docutils literal notranslate"><span class="pre">methionine</span></code>, <code class="docutils literal notranslate"><span class="pre">arginine</span></code>, <code class="docutils literal notranslate"><span class="pre">leucine</span></code>, <code class="docutils literal notranslate"><span class="pre">(stop)</span></code>, <code class="docutils literal notranslate"><span class="pre">aspartic</span> <span class="pre">acid</span></code>. Using the abbreviated one-letter characters, this could be written as <code class="docutils literal notranslate"><span class="pre">MRL.D</span></code>.</p>
+<p>Finally, the body chains together these amino acids into a protein. The stop codon represents the end of the chain, so the RNA sequence would be translated into a protein comprising a chain of three amino acids <code class="docutils literal notranslate"><span class="pre">methionine-arginine-leucine</span></code>.</p>
+<div class="admonition-rna-translation admonition">
+<p class="admonition-title">RNA Translation</p>
+<ol class="simple">
+<li><p>RNA sequence: <code class="docutils literal notranslate"><span class="pre">AUGAGACUCUGAGAC</span></code></p></li>
+<li><p>Codons:  <code class="docutils literal notranslate"><span class="pre">AUG</span></code> <code class="docutils literal notranslate"><span class="pre">AGA</span></code> <code class="docutils literal notranslate"><span class="pre">CUC</span></code> <code class="docutils literal notranslate"><span class="pre">UGA</span></code> <code class="docutils literal notranslate"><span class="pre">GAC</span></code></p></li>
+<li><p>Amino Acids: <code class="docutils literal notranslate"><span class="pre">MRL.D</span></code></p></li>
+<li><p>Protein sequence: <code class="docutils literal notranslate"><span class="pre">MRL</span></code></p></li>
+</ol>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Bioinformatics</p>
+<p>Bioinformatics is the application of tools of computation and analysis to the capture and interpretation of biological data. One of the main applications of bioinformatics is the analysis of genome sequence data, such as that undertaken by the Human Genome Project.</p>
+</div>
+<p>we’ll now see how we can implement this procedure programmatically. In Python, a sequence of character data is termed a <strong>string</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">rna_seq</span> <span class="o">=</span> <span class="s2">&quot;AUGAGACUCUGAGAC&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RNA sequence:&quot;</span><span class="p">,</span> <span class="n">rna_seq</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>RNA sequence: AUGAGACUCUGAGAC
+</pre></div>
+</div>
+</div>
+</div>
+<p>First, let’s write a function <code class="docutils literal notranslate"><span class="pre">translate</span></code> which takes a three letter string and returns a single letter representing the corresponding amino acid.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">translate</span><span class="p">(</span><span class="n">codon</span><span class="p">):</span>
+    <span class="n">codon_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;UUA&quot;</span><span class="p">,</span> <span class="s2">&quot;UUG&quot;</span><span class="p">,</span> <span class="s2">&quot;CUU&quot;</span><span class="p">,</span> <span class="s2">&quot;CUC&quot;</span><span class="p">,</span> <span class="s2">&quot;CUA&quot;</span><span class="p">,</span> <span class="s2">&quot;CUG&quot;</span><span class="p">,</span> <span class="s2">&quot;AUG&quot;</span><span class="p">,</span> <span class="s2">&quot;AGA&quot;</span><span class="p">,</span> <span class="s2">&quot;AGG&quot;</span><span class="p">,</span> <span class="s2">&quot;CGA&quot;</span><span class="p">,</span> <span class="s2">&quot;CGU&quot;</span><span class="p">,</span> <span class="s2">&quot;CGG&quot;</span><span class="p">,</span> <span class="s2">&quot;CGC&quot;</span><span class="p">,</span> <span class="s2">&quot;GAU&quot;</span><span class="p">,</span> <span class="s2">&quot;GAC&quot;</span><span class="p">,</span> <span class="s2">&quot;UAA&quot;</span><span class="p">,</span> <span class="s2">&quot;UAG&quot;</span><span class="p">,</span> <span class="s2">&quot;UGA&quot;</span><span class="p">]</span>
+    <span class="n">amino_acids</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;L&quot;</span><span class="p">,</span> <span class="s2">&quot;M&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;R&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;D&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">,</span>  <span class="s2">&quot;.&quot;</span><span class="p">,</span>  <span class="s2">&quot;.&quot;</span><span class="p">]</span>
+    
+    <span class="n">i</span> <span class="o">=</span> <span class="n">codon_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">codon</span><span class="p">)</span>
+    <span class="n">aa</span> <span class="o">=</span> <span class="n">amino_acids</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">aa</span>
+
+
+<span class="c1"># Test the function using the CGG codon</span>
+<span class="n">codon</span> <span class="o">=</span> <span class="s2">&quot;CGG&quot;</span>
+<span class="n">aa</span> <span class="o">=</span> <span class="n">translate</span><span class="p">(</span><span class="s2">&quot;CGG&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Codon:&quot;</span><span class="p">,</span> <span class="n">codon</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Amino acid:&quot;</span><span class="p">,</span> <span class="n">aa</span><span class="p">)</span>
+   
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Codon: CGG
+Amino acid: R
+</pre></div>
+</div>
+</div>
+</div>
+<p>The list <code class="docutils literal notranslate"><span class="pre">codon_list</span></code> contains the three letter codons, and the list <code class="docutils literal notranslate"><span class="pre">amino_acids</span></code> contains the correspdonding single-letter amino acid abbreviations. Translating from codon to amino acid is simply a case of finding the index position of the codon in <code class="docutils literal notranslate"><span class="pre">codon_list</span></code> and identifying the character in the same position in <code class="docutils literal notranslate"><span class="pre">amino_acids</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="n">codon_list</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="n">codon</span><span class="p">)</span>
+<span class="n">aa</span> <span class="o">=</span> <span class="n">amino_acids</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">i</span></code> is an integer represnting the index of the string <code class="docutils literal notranslate"><span class="pre">codon</span></code> in <code class="docutils literal notranslate"><span class="pre">codon_list</span></code>.</p>
+<div class="seealso admonition">
+<p class="admonition-title">Finding items in a list</p>
+<p>See the previous section <strong>Lists and Plotting</strong> for how to find items in a list.</p>
+</div>
+<p>Next, we would like to split the string <code class="docutils literal notranslate"><span class="pre">rna_seq</span></code> into three-character codons, then use our function to determine the amino acid for each.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rna_seq</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="n">codon</span> <span class="o">=</span> <span class="n">rna_seq</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">translate</span><span class="p">(</span><span class="n">codon</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M
+R
+L
+.
+D
+</pre></div>
+</div>
+</div>
+</div>
+<p>First we use the <code class="docutils literal notranslate"><span class="pre">len</span></code> function to determine the number of characters in the string <code class="docutils literal notranslate"><span class="pre">rna_seq</span></code>. Next we generate a loop from <code class="docutils literal notranslate"><span class="pre">0</span></code> to <code class="docutils literal notranslate"><span class="pre">n</span></code> in steps of <code class="docutils literal notranslate"><span class="pre">3</span></code>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+</pre></div>
+</div>
+<p>The expression <code class="docutils literal notranslate"><span class="pre">rna_seq[i:i+3]</span></code> extracts the a 3-character substring from <code class="docutils literal notranslate"><span class="pre">rna_seq</span></code> begining at the character at index <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
+<p>Finally, what if we’d like to stop processing the sequence once we reach the ‘stop’ codon? Python has a useful keyword <code class="docutils literal notranslate"><span class="pre">break</span></code> which allows us to do exactly that:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rna_seq</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="mi">3</span><span class="p">):</span>
+    <span class="n">codon</span> <span class="o">=</span> <span class="n">rna_seq</span><span class="p">[</span><span class="n">i</span><span class="p">:</span><span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="p">]</span>
+    <span class="k">if</span> <span class="n">codon</span> <span class="o">==</span> <span class="s2">&quot;UGA&quot;</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">translate</span><span class="p">(</span><span class="n">codon</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>M
+R
+L
+</pre></div>
+</div>
+</div>
+</div>
+<p>As soon as the <code class="docutils literal notranslate"><span class="pre">break</span></code> keyword is reached, the enclosing <code class="docutils literal notranslate"><span class="pre">for</span></code> loop is exited, even if this means aborting the loop early.</p>
+</div>
 <div class="section" id="string-variables">
 <h2>String Variables<a class="headerlink" href="#string-variables" title="Permalink to this headline">¶</a></h2>
 <p>A string is data type representing character data. In Python, string literals are surrounded either by double quote <code class="docutils literal notranslate"><span class="pre">&quot;</span></code> or single quote <code class="docutils literal notranslate"><span class="pre">'</span></code> characters.</p>
@@ -270,17 +444,17 @@
 <p>But it is not possible to concatentate a string and a number:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span> <span class="o">=</span> <span class="n">last_name</span> <span class="o">+</span> <span class="mi">55</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">id</span> <span class="o">=</span> <span class="n">greeting</span> <span class="o">+</span> <span class="mi">55</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_3847</span><span class="o">/</span><span class="mf">1020323969.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">id</span> <span class="o">=</span> <span class="n">last_name</span> <span class="o">+</span> <span class="mi">55</span>
+<span class="ne">TypeError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_4135</span><span class="o">/</span><span class="mf">2560201398.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">id</span> <span class="o">=</span> <span class="n">greeting</span> <span class="o">+</span> <span class="mi">55</span>
 
-<span class="ne">NameError</span>: name &#39;last_name&#39; is not defined
+<span class="ne">TypeError</span>: can only concatenate str (not &quot;int&quot;) to str
 </pre></div>
 </div>
 </div>
@@ -322,17 +496,20 @@
 </div>
 <div class="section" id="string-methods">
 <h2>String Methods<a class="headerlink" href="#string-methods" title="Permalink to this headline">¶</a></h2>
-<p>A string is an <strong>object</strong>, which is a data type with <strong>methods</strong> directly attached with it which can be called similarly to calling a function. The  <code class="docutils literal notranslate"><span class="pre">upper</span></code> method returns a new string in upper case:</p>
+<p>A string is an <strong>object</strong>, which is a data type with <strong>methods</strong> directly attached with it which can be called similarly to calling a function. The <code class="docutils literal notranslate"><span class="pre">upper</span></code> method converts a string to upper case, and <code class="docutils literal notranslate"><span class="pre">lower</span></code> to lowercase:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Ian Botham&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">name</span> <span class="o">=</span> <span class="s2">&quot;Jeremy Bentham&quot;</span>
 <span class="n">name_uppercase</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">name_uppercase</span><span class="p">)</span>
+<span class="n">name_lowercase</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">name_lowercase</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>IAN BOTHAM
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>JEREMY BENTHAM
+jeremy bentham
 </pre></div>
 </div>
 </div>
@@ -416,8 +593,8 @@
 </div>
 </div>
 </div>
-<hr class="docutils" />
-<p><strong>NOTE</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>An important difference between lists and strings: whereas it is possible to change the value of an an individual list item, it is <strong>not</strong> possible to change an indivdual string character. We say that strings are <strong>immutable</strong>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]</span>
 <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span> <span class="c1"># this is OK</span>
@@ -431,7 +608,7 @@
 </pre></div>
 </div>
 </div>
-<hr class="docutils" />
+</div>
 <div class="section" id="slicing-lists-and-strings">
 <h2>Slicing Lists and Strings<a class="headerlink" href="#slicing-lists-and-strings" title="Permalink to this headline">¶</a></h2>
 <p>Given a list or string, we can access a single element using square brackets:</p>
@@ -501,14 +678,14 @@
 </div>
 </div>
 </div>
-<hr class="docutils" />
-<p><strong>NOTES</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <ul class="simple">
-<li><p>String comparison is <strong>case-sensitive</strong> so “S” == “s” is <em>not</em> true.</p></li>
+<li><p>String comparison is <strong>case-sensitive</strong> so <code class="docutils literal notranslate"><span class="pre">&quot;S&quot;</span> <span class="pre">==</span> <span class="pre">&quot;s&quot;</span></code> is <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p>Remember to use a double equals to check for equality.</p></li>
 </ul>
 </div>
-<hr class="docutils" />
+</div>
 <div class="section" id="escape-sequences">
 <h2>Escape Sequences<a class="headerlink" href="#escape-sequences" title="Permalink to this headline">¶</a></h2>
 <p>If you want to include special characters in a string, use an <strong>escape sequence</strong>. Precede the character you want to want to escape by a backslash character <code class="docutils literal notranslate"><span class="pre">\</span></code>.</p>
@@ -570,7 +747,7 @@ ABC
 </div>
 <div class="section" id="multi-line-strings">
 <h2>Multi-line Strings<a class="headerlink" href="#multi-line-strings" title="Permalink to this headline">¶</a></h2>
-<p>String literals can span multiple lines, using triple-quotes: “””…””” or ‘’’…’’’.</p>
+<p>String literals can span multiple lines, using triple-quotes: <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code>…<code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">'''</span></code>…<code class="docutils literal notranslate"><span class="pre">'''</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">long_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;Twas the night before Christmas,</span>
@@ -622,6 +799,15 @@ not even a mouse.
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="../3_lists_plotting/3_lists_plotting.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Lists and Plotting</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         
