@@ -43,5 +43,5 @@
 {"cell_type":"markdown","id":"ea1ede","input":"## Creating Numpy Arrays\n\nUnlike Python lists, once a `numpy` array is created, it cannot be resized. We learnt how to create an empty list `[]` and add elements one at a time, but this method doesn't work for arrays. Instead, we must decide the size of the array upfront and create an array of the intended size. Use `np.zeros(n)` to create an array of `n` zeros:","pos":16,"type":"cell"}
 {"cell_type":"markdown","id":"f1f4ee","input":"# Arrays","pos":0,"type":"cell"}
 {"cell_type":"markdown","id":"f7eeed","input":"## Example: Sinusoidal Motion\nThe following equation describes the motion of a damped linear oscillator, where $t$ is time and $x$ is displacement.\n\n$$x(t) = e^{-\\alpha t}\\sin\\left(\\pi f t\\right)$$\n\nPlot the trajectory of the oscillator, given $\\alpha=0.2$ and $f=1.5$.","pos":21,"type":"cell"}
-{"id":0,"time":1632079644173,"type":"user"}
-{"last_load":1631898362402,"type":"file"}
+{"id":0,"time":1635681983586,"type":"user"}
+{"last_load":1635681985189,"type":"file"}
