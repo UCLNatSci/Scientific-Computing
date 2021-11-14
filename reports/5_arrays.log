@@ -17,14 +17,36 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply['content'])
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-id = greeting + 55
+import numpy as np
+import matplotlib.pyplot as plt
+
+# set parameter values
+r = 1
+K = 100
+n_hours = 8
+initial_population = 1000
+
+t = np.arange(0, n_hours, 1)
+pop = np.zeros(n_hours)
+pop[0] = initial_population
+
+pop_X[0] = initial_population
+
+for i in range(n_hours - 1):
+    pop[i+1] = pop[i] + pop[i] * r
+    
+plt.plot(t, pop)
 ------------------
 
 [0;31m---------------------------------------------------------------------------[0m
-[0;31mTypeError[0m                                 Traceback (most recent call last)
-[0;32m/tmp/ipykernel_788/2560201398.py[0m in [0;36m<module>[0;34m[0m
-[0;32m----> 1[0;31m [0mid[0m [0;34m=[0m [0mgreeting[0m [0;34m+[0m [0;36m55[0m[0;34m[0m[0;34m[0m[0m
-[0m
-[0;31mTypeError[0m: can only concatenate str (not "int") to str
-TypeError: can only concatenate str (not "int") to str
+[0;31mNameError[0m                                 Traceback (most recent call last)
+[0;32m/tmp/ipykernel_2024/3210449894.py[0m in [0;36m<module>[0;34m[0m
+[1;32m     12[0m [0mpop[0m[0;34m[[0m[0;36m0[0m[0;34m][0m [0;34m=[0m [0minitial_population[0m[0;34m[0m[0;34m[0m[0m
+[1;32m     13[0m [0;34m[0m[0m
+[0;32m---> 14[0;31m [0mpop_X[0m[0;34m[[0m[0;36m0[0m[0;34m][0m [0;34m=[0m [0minitial_population[0m[0;34m[0m[0;34m[0m[0m
+[0m[1;32m     15[0m [0;34m[0m[0m
+[1;32m     16[0m [0;32mfor[0m [0mi[0m [0;32min[0m [0mrange[0m[0;34m([0m[0mn_hours[0m [0;34m-[0m [0;36m1[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0;34m[0m[0m
+
+[0;31mNameError[0m: name 'pop_X' is not defined
+NameError: name 'pop_X' is not defined
 
