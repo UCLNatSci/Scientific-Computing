@@ -21,16 +21,15 @@
 
 with open("simple_gene.fasta") as f: # Open the file and store it in file object f
     for line in f: # Iterate over each line of text in the file
-        print(line) # line is a string variable containing one line of text
+''        print(line) # line is a string variable containing one line of text
 
 
-# ---
-# **NOTES**  
+# :::{note} 
 # - Python will look for the file in the **same** folder as the `ipynb` file.
 # - The file object `f` is available within the indented `with` block
 # - There are **two** levels of indentation - one for the `with` statement, and one for the `for` loop.
 # - The `with` statement ensures that the file is properly closed once the statements within its block are executed.
-# ---
+# :::
 
 # ## Opening Files
 # 
@@ -67,7 +66,7 @@ with open("simple_gene.fasta") as f: # Open the file and store it in file object
 # 
 # To read a the entire contents of a file in to string variable, use `file.read()`:
 
-# In[2]:
+# In[ ]:
 
 
 with open("simple_gene.fasta") as f:
@@ -76,7 +75,7 @@ with open("simple_gene.fasta") as f:
 
 # To read a single line, use `file.readline()`:
 
-# In[3]:
+# In[ ]:
 
 
 with open("simple_gene.fasta") as f:
@@ -86,7 +85,7 @@ with open("simple_gene.fasta") as f:
 
 # To read one line at a time, use a loop:
 
-# In[4]:
+# In[2]:
 
 
 lines = []
@@ -97,7 +96,7 @@ with open("simple_gene.fasta") as f:
 
 # Or specify the number of characters to read as an argument `file.read(n)`:
 
-# In[5]:
+# In[3]:
 
 
 with open("simple_gene.fasta") as f:
@@ -110,7 +109,7 @@ with open("simple_gene.fasta") as f:
 # 
 # The following code opens the fasta file and reads its contents into a string variable `sequence`. The line beginning with `>` is discarded, and newline characters are removed using `string.strip()`
 
-# In[6]:
+# In[4]:
 
 
 # Open the fasta file containing the DNA sequence
@@ -129,7 +128,7 @@ print(sequence)
 # 
 # To write to a file, first open the file using one of the three write modes 'append', 'write' and 'create'. Then, use `file.write(text)` to write to the file.
 
-# In[7]:
+# In[5]:
 
 
 # open a file for writing, overwriting if it already exists.
@@ -138,12 +137,9 @@ with open("numbers.txt", "w") as f:
     f.write("two\n")
 
 
-# 
-# ---
-# **NOTE**  
+# :::{note}
 # There is no equivalent to `file.readline()` for writing. Instead, use `file.write(text + "\n")` to append a newline character.
-# 
-# ---
+# :::
 # 
 
 # ## Example: Editing a File
@@ -168,7 +164,7 @@ with open("numbers.txt", "w") as f:
 # 
 # We open two files, one for reading and another for writing. We then loop over the rows of the input file, simultaneously writing lines to the output file.
 
-# In[8]:
+# In[6]:
 
 
 with open('coleridge.txt') as f_in: # open file for reading
@@ -192,15 +188,13 @@ with open('coleridge.txt') as f_in: # open file for reading
 # 
 # CSV files are very commonly used to store scientific data and are very useful for transferring data between different systems. It is possible to read the file using standard Python file and string processing instructions, for example using `string.split` to extract data columns. However, because CSV files are so common, Python includes a special module `csv` which includes functions to automate much of this work.
 # 
-# ---
-# **NOTE**  
+# :::{note}
 # If you open a `.csv` file on your computer, it might automatically open in MS Excel or other spreadsheet program. However, in fact it is not a spreadsheet file. To see the file in plain text form, open it in a text editor such as notepad (Windows) or TextEdit (Mac). If you are doing a lot of work with text files, it is recommended that you install a dedicated text processing program such as Notepad++ (Windows) or Atom (multiple platforms).
-# 
-# ---
+# :::
 # 
 # The following code reads the first, second and sixth columns into four lists:
 
-# In[9]:
+# In[3]:
 
 
 import csv # import the csv module
@@ -229,7 +223,7 @@ with open("periodic_table.csv") as f:
 
 # Now we have four lists containing four columns from the CSV file. Let's make a scatter plot showing boiling point against melting point:
 
-# In[10]:
+# In[20]:
 
 
 import matplotlib.pyplot as plt

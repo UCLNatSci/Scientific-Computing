@@ -104,8 +104,16 @@ z = np.arange(0, 1, 0.1)
 print(z)
 
 
-# :::{note}
-# **PYTHON LISTS VS NUMPY ARRAYS**
+# Use `np.linspace(a, b, num)` To generate an `num` evenly spaced numbers between `a` and `b`:
+
+# In[10]:
+
+
+z = np.linspace(0, 1, 4)
+print(z)
+
+
+# :::{admonition} Python lists VS Numpy arrays
 # 
 # |Python list|Numpy array|
 # |---|---|
@@ -116,14 +124,14 @@ print(z)
 # |Slow|Fast|
 # :::
 
-# ## Example: Sinusoidal Motion
+# ## Example: Damped Oscillator
 # The following equation describes the motion of a damped linear oscillator, where $t$ is time and $x$ is displacement.
 # 
 # $$x(t) = e^{-\alpha t}\sin\left(\pi f t\right)$$
 # 
-# Plot the trajectory of the oscillator, given $\alpha=0.2$ and $f=1.5$.
+# We will plot the trajectory of the oscillator, given $\alpha=0.2$ and $f=1.5$.
 
-# In[10]:
+# In[11]:
 
 
 alpha = 0.2
@@ -138,35 +146,26 @@ plt.xlabel("Time (s)")
 plt.ylabel("Displacement (m)")
 
 
-# ---
-# **Exercise**  
-# The graph is quite jagged due to the large step size. Make the graph smoother by changing the step size in the `np.arange` function.
-# 
-# ---
-# 
-
 # ## Multi-Dimensional Arrays
 # We specifiy 2 dimensional arrays using a list whose elements are the rows of the array. For example, to specify the following 2-d array:
+# 
 # $$\left[\begin{matrix}
 # 1 & 2 & 3\\
 # 4 & 5 & 6
 # \end{matrix}\right]$$
 
-# In[11]:
+# In[12]:
 
 
 data = [[1, 2, 3], [4, 5, 6]]
 x = np.array(data)
-
-
-
 
 print(x)
 
 
 # `data` is a **nested list**. Each element of `data` is itself a list representing a row of the array. Note that we can make this a lot clearer by writing each row on a separate line:
 
-# In[12]:
+# In[13]:
 
 
 x = np.array([[1, 2, 3],
@@ -176,7 +175,7 @@ print(x)
 
 # Individual array elements are accessed using the `[]` index notation, passing one index per dimension. `x[i,j]` returns the element in row `i`, column `j`:
 
-# In[13]:
+# In[14]:
 
 
 z = x[0,1]
@@ -186,14 +185,20 @@ print(z)
 # ### Array slicing
 # Use a colon `:` in place of the index to extract an entire row or column from an array. This is called taking a 'slice' from the array.
 
-# In[14]:
+# In[ ]:
+
+
+
+
+
+# In[15]:
 
 
 first_row = x[0,:]
 print(first_row)
 
 
-# In[15]:
+# In[16]:
 
 
 first_column = x[:,0]
@@ -202,121 +207,57 @@ print(first_column)
 
 # Supply starting and ending indexes to extract parts of an array.  Remember that in Python, we always include the start index but exclude the end index.
 
-# In[16]:
+# In[17]:
 
 
 first_two_columns = x[:,:1]
 print(first_two_columns)
 
 
-# ## Example: Linear Oscillator
+# See the figure below for an illustration of slicing a 2-d array.
 # 
-# Newton's law states that the acceleration of a mass is proportional the force applied to it:
-# 
-# $$F = m\ddot{x}$$
-# 
-# where $F$ is force, $m$ is mass and $\ddot{x}$ is the second derivative of particle displacement.
-# 
-# Suppose we have a mass attached to a spring. Then Hooke's law states that the force on the mass is proportional to displacement $x$, measured from its equilibrium position:
-# 
-# $$F = -kx$$
-# 
-# The minus sign represents the fact that the force acts in the opposite direction to the displacement.
-# 
-# Combining the two equations and setting velocity $v = \dot{x}$ we arrive at the following set of coupled equations:
-# 
-# $$ \begin{align*}
-# \frac{dx}{dt} &= v\\
-# \frac{dv}{dt} &= (-k/m)x
-# \end{align*}$$
-# 
-# To solve these equations numerically, we will split time into discrete timesteps $\Delta t$, and calculate the approximate change in $x$ and $v$ at each timestep:
-# 
-# $$ \begin{align*}
-# \frac{\Delta x}{\Delta t} &= v\\
-# \frac{\Delta v}{\Delta t} &= (-k/m)x
-# \end{align*}$$
-# 
-# Finally, using $x_i$ and $v_i$ to represent the value of displacement and velocity at timestep $i$:
-# 
-# $$ \begin{align*}
-# x_{i+1} &= x_i + v_i\Delta t\\
-# v_{i+1} &= v_i + (-k/m)x_i\Delta t
-# \end{align*}$$
-# 
-# Using this form of equations we can **numerically integrate** the system from a given **initial condition** $x_0, v_0$.
-# 
-# Given one-dimensional numpy arrays `x` and `v` representing the displacement and velocity respectively, we can use the equations above to calculate the values of `x[i+1]` and `v[i+1]` given `x[i]` and `v[i]`.
-# 
-# ```
-# x[i+1] = x[i] + v[i] * delta_t
-# v[i+1] = v[i] - (k/m)*x[i]*delta_t
+# ```{figure} Numpy1.jpg
+# ---
+# name: slicing-fig
+# ---
+# Numpy array slicing
 # ```
 # 
-# First we import the necessary libraries and set the values of the timestep `delta_t`, upper time limit `t_max`, spring constant `k` and mass `m`.
-
-# In[17]:
-
-
-import matplotlib.pyplot as plt
-import numpy as np
-
-t_max = 40
-delta_t = 0.001 # time step is 1 ms
-k = 0.1
-m = 0.1
-
-
-# Next, we create an array of timepoints `t` and arrays of the same length `x` and `v`. `x` and `v` are initially zero, except for the first elements which are set to the initial displacement and velocity.
+# ## Example: Population Growth
+# 
+# The following equation describes the rate of growth of a population $x_i$ of hourly growth $r$.
+# 
+# $$x_{i+1} = x_i + rx_i$$
+# 
+# Previously we simulated population growth using Python lists. Below is how we might do exactly the same using arrays.
 
 # In[18]:
 
 
-t = np.arange(0, t_max, delta_t) # array of time points from 0 to t_max
+import numpy as np
+import matplotlib.pyplot as plt
 
-n_steps = len(t)
+# set parameter values
+r = 1
+K = 100
+n_hours = 8
+initial_population = 1000
 
-x = np.zeros(n_steps)
-v = np.zeros(n_steps)
+# create array of time points
+t = np.arange(0, n_hours, 1)
 
-x[0] = 0.1 # initial displacement
-v[0] = 0 # initial velocity
+pop = np.zeros(n_hours)
+pop[0] = initial_population
 
-
-# The main step is to integrate the equations using the expressions derived above. We loop over all the time steps, calculating the position and velocity each step:
-
-# In[19]:
-
-
-for i in range(n_steps - 1):
-    x[i+1] = x[i] + v[i] * delta_t
-    v[i+1] = v[i] - (k/m)*x[i]*delta_t
-
-
-# Finally we can plot the position and velocity on the same graph:
-
-# In[20]:
+# run simulation
+for i in range(n_hours - 1):
+    pop[i+1] = pop[i] + pop[i] * r
+    
+plt.plot(t, pop)
 
 
-# Note the rather complicated method for setting up the plots
-# So that we can have a single legend but separate axes for displacement
-# and velocity
-
-fig = plt.figure(figsize=(8, 3))
-ax = fig.add_subplot()
-ax.plot(t, x, ls="-", label="x")
-ax.set_ylabel("displacement (m)")
-ax.set_xlabel("time (s)")
-ax_r = ax.twinx() # allows us to have separate y-axes on left and right
-ax_r.plot(t, v, ls=":", label="v")
-ax_r.set_ylabel("velocity (m/s)")
-fig.legend()
+# In[ ]:
 
 
-# :::{note}
-# **Forward Euler Method**
-# 
-# This method of integrating differential equations is called the Forward Euler method. Faster and more accurate methods are also the available, such as the Runga-Kutta method. A variety of methods can be accessed by importing `scipy.integrate.odeint`.
-# :::
-# 
-# 
+
+

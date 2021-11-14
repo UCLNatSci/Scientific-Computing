@@ -51,6 +51,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Arrays" href="../5_arrays/5_arrays.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -87,7 +88,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_variables_arithmetic/1_variables_arithmetic.html">
    Python Fundamentals
@@ -106,6 +107,16 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../4_strings/4_strings.html">
    Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5_arrays/5_arrays.html">
+   Arrays
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Files
   </a>
  </li>
 </ul>
@@ -244,28 +255,21 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;simple_gene.fasta&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># Open the file and store it in file object f</span>
     <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">f</span><span class="p">:</span> <span class="c1"># Iterate over each line of text in the file</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="c1"># line is a string variable containing one line of text</span>
+<span class="s1">&#39;&#39;</span>        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="c1"># line is a string variable containing one line of text</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&gt;AB000263 |acc=AB000263|descr=Homo sapiens mRNA for prepro cortistatin like peptide, complete cds.|len=368
-
-TCAATAGTCAGCTGCACTCGAGCGACTCTGAAGGACCTGCCCCCTGTCCGACACCCCAAA
-
-GAGTCTATTGACCCGGGGACGCGAGTCCTCCGGAAGTGGGAGACGAGACCCATTTCAAGT
-
-AACCTTGTCTTTCTTTACCTAAATAGACGAGAAGCGCAACTTCTTCATGTTTTACAGTAA
-
-TTACGATACGTCTTTTAGAATCTCACAGGGTAGACAGACCTCAACTAGTTCCTTGGACAG
-
-AGGTGTTTCACACTGGTGTATAAAACGTTTAAAACGTACGACTT
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">  File</span><span class="nn"> &quot;/tmp/ipykernel_1357/1205156460.py&quot;</span><span class="gt">, line </span><span class="mi">3</span>
+    <span class="s1">&#39;&#39;</span>        <span class="nb">print</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="c1"># line is a string variable containing one line of text</span>
+                                                                                 <span class="o">^</span>
+<span class="ne">IndentationError</span>: expected an indented block
 </pre></div>
 </div>
 </div>
 </div>
-<hr class="docutils" />
-<p><strong>NOTES</strong></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <ul class="simple">
 <li><p>Python will look for the file in the <strong>same</strong> folder as the <code class="docutils literal notranslate"><span class="pre">ipynb</span></code> file.</p></li>
 <li><p>The file object <code class="docutils literal notranslate"><span class="pre">f</span></code> is available within the indented <code class="docutils literal notranslate"><span class="pre">with</span></code> block</p></li>
@@ -273,7 +277,7 @@ AGGTGTTTCACACTGGTGTATAAAACGTTTAAAACGTACGACTT
 <li><p>The <code class="docutils literal notranslate"><span class="pre">with</span></code> statement ensures that the file is properly closed once the statements within its block are executed.</p></li>
 </ul>
 </div>
-<hr class="docutils" />
+</div>
 <div class="section" id="opening-files">
 <h2>Opening Files<a class="headerlink" href="#opening-files" title="Permalink to this headline">¶</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">open</span></code> function takes two parameters, <code class="docutils literal notranslate"><span class="pre">filename</span></code> and <code class="docutils literal notranslate"><span class="pre">mode</span></code>.</p>
@@ -377,11 +381,11 @@ AGGTGTTTCACACTGGTGTATAAAACGTTTAAAACGTACGACTT
 </div>
 </div>
 </div>
-<hr class="docutils" />
-<p><strong>NOTE</strong><br />
-There is no equivalent to <code class="docutils literal notranslate"><span class="pre">file.readline()</span></code> for writing. Instead, use <code class="docutils literal notranslate"><span class="pre">file.write(text</span> <span class="pre">+</span> <span class="pre">&quot;\n&quot;)</span></code> to append a newline character.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is no equivalent to <code class="docutils literal notranslate"><span class="pre">file.readline()</span></code> for writing. Instead, use <code class="docutils literal notranslate"><span class="pre">file.write(text</span> <span class="pre">+</span> <span class="pre">&quot;\n&quot;)</span></code> to append a newline character.</p>
 </div>
-<hr class="docutils" />
+</div>
 <div class="section" id="example-editing-a-file">
 <h2>Example: Editing a File<a class="headerlink" href="#example-editing-a-file" title="Permalink to this headline">¶</a></h2>
 <p>For historical and performance reasons, we do not typically edit files directly. Instead, we combine read and write operations to convert an input file into an output file. For example, suppose we would like to add line numbers to a text file <code class="docutils literal notranslate"><span class="pre">coleridge.txt</span></code>.</p>
@@ -424,10 +428,10 @@ There is no equivalent to <code class="docutils literal notranslate"><span class
 </pre></div>
 </div>
 <p>CSV files are very commonly used to store scientific data and are very useful for transferring data between different systems. It is possible to read the file using standard Python file and string processing instructions, for example using <code class="docutils literal notranslate"><span class="pre">string.split</span></code> to extract data columns. However, because CSV files are so common, Python includes a special module <code class="docutils literal notranslate"><span class="pre">csv</span></code> which includes functions to automate much of this work.</p>
-<hr class="docutils" />
-<p><strong>NOTE</strong><br />
-If you open a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file on your computer, it might automatically open in MS Excel or other spreadsheet program. However, in fact it is not a spreadsheet file. To see the file in plain text form, open it in a text editor such as notepad (Windows) or TextEdit (Mac). If you are doing a lot of work with text files, it is recommended that you install a dedicated text processing program such as Notepad++ (Windows) or Atom (multiple platforms).</p>
-<hr class="docutils" />
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you open a <code class="docutils literal notranslate"><span class="pre">.csv</span></code> file on your computer, it might automatically open in MS Excel or other spreadsheet program. However, in fact it is not a spreadsheet file. To see the file in plain text form, open it in a text editor such as notepad (Windows) or TextEdit (Mac). If you are doing a lot of work with text files, it is recommended that you install a dedicated text processing program such as Notepad++ (Windows) or Atom (multiple platforms).</p>
+</div>
 <p>The following code reads the first, second and sixth columns into four lists:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -508,6 +512,15 @@ If you open a <code class="docutils literal notranslate"><span class="pre">.csv<
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="../5_arrays/5_arrays.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Arrays</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         
