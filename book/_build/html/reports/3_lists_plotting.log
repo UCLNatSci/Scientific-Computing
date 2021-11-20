@@ -20,7 +20,7 @@ nbclient.exceptions.CellExecutionError: An error occurred while executing the fo
 print("***"
 ------------------
 
-[0;36m  File [0;32m"/tmp/ipykernel_3450/2048779763.py"[0;36m, line [0;32m1[0m
+[0;36m  File [0;32m"/tmp/ipykernel_4012/2048779763.py"[0;36m, line [0;32m1[0m
 [0;31m    print("***"[0m
 [0m               ^[0m
 [0;31mSyntaxError[0m[0;31m:[0m unexpected EOF while parsing
