@@ -40,4 +40,4 @@
 {"cell_type":"markdown","id":"f1f4ee","input":"# Arrays","pos":0,"type":"cell"}
 {"cell_type":"markdown","id":"f7eeed","input":"## Example: Damped Oscillator\nThe following equation describes the motion of a damped linear oscillator, where $t$ is time and $x$ is displacement.\n\n$$x(t) = e^{-\\alpha t}\\sin\\left(\\pi f t\\right)$$\n\nWe will plot the trajectory of the oscillator, given $\\alpha=0.2$ and $f=1.5$.","pos":23,"type":"cell"}
 {"id":0,"time":1636825850418,"type":"user"}
-{"last_load":1636847100630,"type":"file"}
+{"last_load":1637017206969,"type":"file"}

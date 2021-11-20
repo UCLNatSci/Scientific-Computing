@@ -21,7 +21,7 @@
 
 with open("simple_gene.fasta") as f: # Open the file and store it in file object f
     for line in f: # Iterate over each line of text in the file
-''        print(line) # line is a string variable containing one line of text
+        print(line) # line is a string variable containing one line of text
 
 
 # :::{note} 
@@ -66,7 +66,7 @@ with open("simple_gene.fasta") as f: # Open the file and store it in file object
 # 
 # To read a the entire contents of a file in to string variable, use `file.read()`:
 
-# In[ ]:
+# In[2]:
 
 
 with open("simple_gene.fasta") as f:
@@ -75,7 +75,7 @@ with open("simple_gene.fasta") as f:
 
 # To read a single line, use `file.readline()`:
 
-# In[ ]:
+# In[3]:
 
 
 with open("simple_gene.fasta") as f:
@@ -85,7 +85,7 @@ with open("simple_gene.fasta") as f:
 
 # To read one line at a time, use a loop:
 
-# In[2]:
+# In[4]:
 
 
 lines = []
@@ -96,7 +96,7 @@ with open("simple_gene.fasta") as f:
 
 # Or specify the number of characters to read as an argument `file.read(n)`:
 
-# In[3]:
+# In[5]:
 
 
 with open("simple_gene.fasta") as f:
@@ -109,7 +109,7 @@ with open("simple_gene.fasta") as f:
 # 
 # The following code opens the fasta file and reads its contents into a string variable `sequence`. The line beginning with `>` is discarded, and newline characters are removed using `string.strip()`
 
-# In[4]:
+# In[6]:
 
 
 # Open the fasta file containing the DNA sequence
@@ -128,7 +128,7 @@ print(sequence)
 # 
 # To write to a file, first open the file using one of the three write modes 'append', 'write' and 'create'. Then, use `file.write(text)` to write to the file.
 
-# In[5]:
+# In[7]:
 
 
 # open a file for writing, overwriting if it already exists.
@@ -164,7 +164,7 @@ with open("numbers.txt", "w") as f:
 # 
 # We open two files, one for reading and another for writing. We then loop over the rows of the input file, simultaneously writing lines to the output file.
 
-# In[6]:
+# In[8]:
 
 
 with open('coleridge.txt') as f_in: # open file for reading
@@ -194,7 +194,7 @@ with open('coleridge.txt') as f_in: # open file for reading
 # 
 # The following code reads the first, second and sixth columns into four lists:
 
-# In[3]:
+# In[9]:
 
 
 import csv # import the csv module
@@ -223,7 +223,7 @@ with open("periodic_table.csv") as f:
 
 # Now we have four lists containing four columns from the CSV file. Let's make a scatter plot showing boiling point against melting point:
 
-# In[20]:
+# In[10]:
 
 
 import matplotlib.pyplot as plt
