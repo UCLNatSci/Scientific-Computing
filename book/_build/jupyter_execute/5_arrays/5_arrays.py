@@ -117,7 +117,7 @@ print(z)
 # 
 # |Python list|Numpy array|
 # |---|---|
-# |Fixed size (no `append` method)|Variable size (use `list.append` to add an item to a list)|
+# |Variable size (use `list.append` to add an item to a list)|Fixed size (no `append` method)|
 # |One-dimensional|One-dimensional or multidimensional|
 # |Can store multiple data types (strings, floats, ints, other lists)|Can store only numerical data of a single type|
 # |Does not support vector operations|Supports vector operations|
@@ -210,7 +210,7 @@ print(first_column)
 # In[17]:
 
 
-first_two_columns = x[:,:1]
+first_two_columns = x[:,:2]
 print(first_two_columns)
 
 

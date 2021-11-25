@@ -408,8 +408,8 @@ sin(theta): [0.70710678 1.        ]
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Fixed size (no <code class="docutils literal notranslate"><span class="pre">append</span></code> method)</p></td>
-<td><p>Variable size (use <code class="docutils literal notranslate"><span class="pre">list.append</span></code> to add an item to a list)</p></td>
+<tr class="row-even"><td><p>Variable size (use <code class="docutils literal notranslate"><span class="pre">list.append</span></code> to add an item to a list)</p></td>
+<td><p>Fixed size (no <code class="docutils literal notranslate"><span class="pre">append</span></code> method)</p></td>
 </tr>
 <tr class="row-odd"><td><p>One-dimensional</p></td>
 <td><p>One-dimensional or multidimensional</p></td>
@@ -542,14 +542,14 @@ sin(theta): [0.70710678 1.        ]
 <p>Supply starting and ending indexes to extract parts of an array.  Remember that in Python, we always include the start index but exclude the end index.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_two_columns</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,:</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">first_two_columns</span> <span class="o">=</span> <span class="n">x</span><span class="p">[:,:</span><span class="mi">2</span><span class="p">]</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">first_two_columns</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1]
- [4]]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2]
+ [4 5]]
 </pre></div>
 </div>
 </div>
@@ -593,7 +593,7 @@ sin(theta): [0.70710678 1.        ]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f945d970e80&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fe97ae7ef40&gt;]
 </pre></div>
 </div>
 <img alt="../_images/5_arrays_38_1.png" src="../_images/5_arrays_38_1.png" />
