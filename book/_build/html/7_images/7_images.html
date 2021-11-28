@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Images Processing &#8212; Scientific Computing for Natural Sciences</title>
+    <title>Image Processing &#8212; Scientific Computing for Natural Sciences</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -53,6 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Files" href="../6_files/6_files.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -89,7 +90,7 @@
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../1_variables_arithmetic/1_variables_arithmetic.html">
    Python Fundamentals
@@ -108,6 +109,21 @@
  <li class="toctree-l1">
   <a class="reference internal" href="../4_strings/4_strings.html">
    Strings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../5_arrays/5_arrays.html">
+   Arrays
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../6_files/6_files.html">
+   Files
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Image Processing
   </a>
  </li>
 </ul>
@@ -185,21 +201,23 @@
   <a class="reference internal nav-link" href="#more-array-functions">
    More Array Functions
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#shape-method">
-   <code class="docutils literal notranslate">
-    <span class="pre">
-     shape
-    </span>
-   </code>
-   Method
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#axis-methods">
-   Axis Methods
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shape-method">
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       shape
+      </span>
+     </code>
+     Method
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#axis-methods">
+     Axis Methods
+    </a>
+   </li>
+  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#images">
@@ -244,8 +262,8 @@
         
               <div>
                 
-  <div class="section" id="images-processing">
-<h1>Images Processing<a class="headerlink" href="#images-processing" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="image-processing">
+<h1>Image Processing<a class="headerlink" href="#image-processing" title="Permalink to this headline">¶</a></h1>
 <p>This tutorial will examine how to use Python and Numpy to process images, which can be expressed as 2 or 3 dimensional arrays.</p>
 <div class="section" id="more-array-functions">
 <h2>More Array Functions<a class="headerlink" href="#more-array-functions" title="Permalink to this headline">¶</a></h2>
@@ -315,9 +333,8 @@
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="shape-method">
-<h2><code class="docutils literal notranslate"><span class="pre">shape</span></code> Method<a class="headerlink" href="#shape-method" title="Permalink to this headline">¶</a></h2>
+<h3><code class="docutils literal notranslate"><span class="pre">shape</span></code> Method<a class="headerlink" href="#shape-method" title="Permalink to this headline">¶</a></h3>
 <p>Given an array, we can determine its dimensions using the <code class="docutils literal notranslate"><span class="pre">shape</span></code> method, which returns a tuple:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -342,7 +359,7 @@ second dimension: 4
 </div>
 </div>
 <div class="section" id="axis-methods">
-<h2>Axis Methods<a class="headerlink" href="#axis-methods" title="Permalink to this headline">¶</a></h2>
+<h3>Axis Methods<a class="headerlink" href="#axis-methods" title="Permalink to this headline">¶</a></h3>
 <p>The method <code class="docutils literal notranslate"><span class="pre">np.sum</span></code> allows us to calculate the sum of the elements in an array. If your array is 2-dimensional, it is often useful to calculate the sum in one dimension only, to return a 1-dimensional array. This can be achieved using the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter of the <code class="docutils literal notranslate"><span class="pre">sum</span></code> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -374,11 +391,12 @@ second dimension: 4
 </div>
 <p>Other methods that take the <code class="docutils literal notranslate"><span class="pre">axis</span></code> parameter include <code class="docutils literal notranslate"><span class="pre">np.max</span></code> and <code class="docutils literal notranslate"><span class="pre">np.mean</span></code>.</p>
 </div>
+</div>
 <div class="section" id="images">
 <h2>Images<a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h2>
 <p>An image file is essentially a 3-dimensional array where each element represents colour intensity of each pixel. The first two dimensions correspond to the x and y co-ordinates of each pixel, and the third dimension corresponds to its RGBA value (R=red, G=Green, B=Blue and A=alpha which encodes transparency).</p>
-<p>The file <code class="docutils literal notranslate"><span class="pre">bw.png</span></code> is an 8 by 8 pixel image:</p>
-<img src="bw_big.png" />
+<p>The file <code class="docutils literal notranslate"><span class="pre">bw.png</span></code> is an 8 by 8 pixel image (<a href="../tutorial_7/bw.png" download>download</a>):</p>
+<p><img alt="" src="../_images/bw_big.png" /></p>
 <p>First we import the module <code class="docutils literal notranslate"><span class="pre">matplotlib.image</span></code> and use the <code class="docutils literal notranslate"><span class="pre">imread</span></code> function to convert it to an array.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -391,30 +409,7 @@ second dimension: 4
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">FileNotFoundError</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_697</span><span class="o">/</span><span class="mf">2294064824.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span> <span class="c1"># import the image module</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">x</span> <span class="o">=</span> <span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;bw.png&quot;</span><span class="p">)</span> <span class="c1"># read the image into an array</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> 
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;shape:&quot;</span><span class="p">,</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
-
-<span class="nn">/usr/local/lib/python3.8/dist-packages/matplotlib/image.py</span> in <span class="ni">imread</span><span class="nt">(fname, format)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1499</span>                     <span class="n">response</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-<span class="g g-Whitespace">   </span><span class="mi">1500</span>                 <span class="k">return</span> <span class="n">imread</span><span class="p">(</span><span class="n">response</span><span class="p">,</span> <span class="nb">format</span><span class="o">=</span><span class="n">ext</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1501</span>     <span class="k">with</span> <span class="n">img_open</span><span class="p">(</span><span class="n">fname</span><span class="p">)</span> <span class="k">as</span> <span class="n">image</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1502</span>         <span class="k">return</span> <span class="p">(</span><span class="n">_pil_png_to_float_array</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1503</span>                 <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">PIL</span><span class="o">.</span><span class="n">PngImagePlugin</span><span class="o">.</span><span class="n">PngImageFile</span><span class="p">)</span> <span class="k">else</span>
-
-<span class="nn">/usr/local/lib/python3.8/dist-packages/PIL/ImageFile.py</span> in <span class="ni">__init__</span><span class="nt">(self, fp, filename)</span>
-<span class="g g-Whitespace">    </span><span class="mi">107</span>         <span class="k">if</span> <span class="n">isPath</span><span class="p">(</span><span class="n">fp</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">108</span>             <span class="c1"># filename</span>
-<span class="ne">--&gt; </span><span class="mi">109</span>             <span class="bp">self</span><span class="o">.</span><span class="n">fp</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">110</span>             <span class="bp">self</span><span class="o">.</span><span class="n">filename</span> <span class="o">=</span> <span class="n">fp</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span>             <span class="bp">self</span><span class="o">.</span><span class="n">_exclusive_fp</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="ne">FileNotFoundError</span>: [Errno 2] No such file or directory: &#39;bw.png&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>shape: (8, 8, 4)
 </pre></div>
 </div>
 </div>
@@ -481,7 +476,7 @@ second dimension: 4
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f1b93dcce50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f55bd81c820&gt;
 </pre></div>
 </div>
 <img alt="../_images/7_images_22_1.png" src="../_images/7_images_22_1.png" />
@@ -563,7 +558,7 @@ Max: 4.0
  [False False False False False False False False]]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f1b91d30610&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f55bd640f70&gt;
 </pre></div>
 </div>
 <img alt="../_images/7_images_30_2.png" src="../_images/7_images_30_2.png" />
@@ -591,7 +586,7 @@ Max: 4.0
  [False False False False False False False False]]
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f1b91d13640&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.image.AxesImage at 0x7f55bd774700&gt;
 </pre></div>
 </div>
 <img alt="../_images/7_images_32_2.png" src="../_images/7_images_32_2.png" />
@@ -668,14 +663,14 @@ Next we determine the location of the largest blob using the <code class="docuti
 </div>
 </div>
 </div>
-<hr class="docutils" />
-<p><strong>NOTE</strong><br />
-The <code class="docutils literal notranslate"><span class="pre">location</span></code> variable is a <code class="docutils literal notranslate"><span class="pre">tuple</span></code>. A tuple is the same as a list, and we use the same square bracket notation to access elements, such as <code class="docutils literal notranslate"><span class="pre">location[0]</span></code>. But:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">location</span></code> variable is a <code class="docutils literal notranslate"><span class="pre">tuple</span></code>. A tuple is the same as a list, and we use the same square bracket notation to access elements, such as <code class="docutils literal notranslate"><span class="pre">location[0]</span></code>. But:</p>
 <ul class="simple">
-<li><p>When defining a tuple we use round brackets <code class="docutils literal notranslate"><span class="pre">()</span></code> instead of square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>. <code class="docutils literal notranslate"><span class="pre">location</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">4)</span></code></p></li>
-<li><p>A tuple is <strong>immutable</strong>, meaning its elements cannot be changed. <code class="docutils literal notranslate"><span class="pre">location[0]</span> <span class="pre">=</span> <span class="pre">5</span></code> results in an error</p></li>
+<li><p>When defining a tuple we use round brackets <code class="docutils literal notranslate"><span class="pre">()</span></code> instead of square brackets <code class="docutils literal notranslate"><span class="pre">[]</span></code>. <code class="docutils literal notranslate"><span class="pre">location</span> <span class="pre">=</span> <span class="pre">(1,</span> <span class="pre">4)</span></code>.</p></li>
+<li><p>A tuple is <strong>immutable</strong>, meaning its elements cannot be changed. <code class="docutils literal notranslate"><span class="pre">location[0]</span> <span class="pre">=</span> <span class="pre">5</span></code> results in an error.</p></li>
 </ul>
-<hr class="docutils" />
+</div>
 <p>Finally we will mark the location of the centre of the largest blob using <code class="docutils literal notranslate"><span class="pre">plt.scatter</span></code>. Arrays indices are ordered <em>row</em> then <em>column</em> which is opposite to x-y ordering for the scatter plot, so we have to reverse the ordering of the <code class="docutils literal notranslate"><span class="pre">location</span></code> elements when plotting.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -688,7 +683,7 @@ The <code class="docutils literal notranslate"><span class="pre">location</span>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f1b84306c70&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f55a3d67a30&gt;
 </pre></div>
 </div>
 <img alt="../_images/7_images_43_1.png" src="../_images/7_images_43_1.png" />
@@ -728,6 +723,15 @@ The <code class="docutils literal notranslate"><span class="pre">location</span>
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="../6_files/6_files.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Files</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         

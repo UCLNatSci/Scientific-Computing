@@ -36,3 +36,7 @@ launch_buttons:
   binderhub_url             :  # The URL of the BinderHub (e.g., https://mybinder.org)  
 
 only_build_toc_files: true
+
+sphinx:
+  config:
+    html_extra_path: ['files']

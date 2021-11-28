@@ -10,4 +10,4 @@ chapters:
 - file: 4_strings/4_strings.ipynb
 - file: 5_arrays/5_arrays.ipynb
 - file: 6_files/6_files.ipynb
-# - file: 7_images/7_images.ipynb
+- file: 7_images/7_images.ipynb

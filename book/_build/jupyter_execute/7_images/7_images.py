@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Images Processing
-# This tutorial will examine how to use Python and Numpy to process images, which can be expressed as 2 or 3 dimensional arrays. 
+# # Image Processing
+# This tutorial will examine how to use Python and Numpy to process images, which can be expressed as 2 or 3 dimensional arrays.
 
 # ## More Array Functions
 # 
@@ -52,7 +52,7 @@ a[2,:] = row3
 print(a)
 
 
-# ## `shape` Method
+# ### `shape` Method
 # 
 # Given an array, we can determine its dimensions using the `shape` method, which returns a tuple:
 
@@ -69,7 +69,7 @@ print("first dimension:", x)
 print("second dimension:", y)
 
 
-# ## Axis Methods
+# ### Axis Methods
 # The method `np.sum` allows us to calculate the sum of the elements in an array. If your array is 2-dimensional, it is often useful to calculate the sum in one dimension only, to return a 1-dimensional array. This can be achieved using the `axis` parameter of the `sum` function:
 
 # In[5]:
@@ -95,9 +95,9 @@ print(sum_of_columns)
 # ## Images
 # An image file is essentially a 3-dimensional array where each element represents colour intensity of each pixel. The first two dimensions correspond to the x and y co-ordinates of each pixel, and the third dimension corresponds to its RGBA value (R=red, G=Green, B=Blue and A=alpha which encodes transparency).
 # 
-# The file `bw.png` is an 8 by 8 pixel image:
+# The file `bw.png` is an 8 by 8 pixel image (<a href="../tutorial_7/bw.png" download>download</a>):
 # 
-# <img src="bw_big.png" />
+# ![](bw_big.png)
 # 
 # First we import the module `matplotlib.image` and use the `imread` function to convert it to an array.
 
@@ -249,13 +249,11 @@ location = sn.center_of_mass(x_thres, x_labels, idx + 1) # determine the coordin
 print("location:", location)
 
 
-# ---
-# **NOTE**  
+# ```{note}  
 # The `location` variable is a `tuple`. A tuple is the same as a list, and we use the same square bracket notation to access elements, such as `location[0]`. But:
-# - When defining a tuple we use round brackets `()` instead of square brackets `[]`. `location = (1, 4)`
-# - A tuple is **immutable**, meaning its elements cannot be changed. `location[0] = 5` results in an error
-# 
-# ---
+# - When defining a tuple we use round brackets `()` instead of square brackets `[]`. `location = (1, 4)`.
+# - A tuple is **immutable**, meaning its elements cannot be changed. `location[0] = 5` results in an error.
+# ```
 
 # Finally we will mark the location of the centre of the largest blob using `plt.scatter`. Arrays indices are ordered *row* then *column* which is opposite to x-y ordering for the scatter plot, so we have to reverse the ordering of the `location` elements when plotting. 
 
