@@ -239,7 +239,6 @@ import matplotlib.pyplot as plt
 
 # set parameter values
 r = 1
-K = 100
 n_hours = 8
 initial_population = 1000
 

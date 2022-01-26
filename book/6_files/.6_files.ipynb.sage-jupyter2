@@ -21,5 +21,5 @@
 {"cell_type":"markdown","id":"d233ab","input":"To read one line at a time, use a loop:","pos":7,"type":"cell"}
 {"cell_type":"markdown","id":"ef8720","input":"## Example: Editing a File\n\nFor historical and performance reasons, we do not typically edit files directly. Instead, we combine read and write operations to convert an input file into an output file. For example, suppose we would like to add line numbers to a text file `coleridge.txt`.\n\nInput:\n```\nIn Xanadu did Kubla Khan\nA stately pleasure-dome decree:\nWhere Alph, the sacred river, ran\n...\n```\n\nOutput:\n```\nLine 1: In Xanadu did Kubla Khan\nLine 2: A stately pleasure-dome decree:\nLine 3: Where Alph, the sacred river, ran\n...\n```\n\nWe open two files, one for reading and another for writing. We then loop over the rows of the input file, simultaneously writing lines to the output file.","pos":16,"type":"cell"}
 {"cell_type":"markdown","id":"f2ef51","input":"Or specify the number of characters to read as an argument `file.read(n)`:","pos":9,"type":"cell"}
-{"id":0,"time":1637936326033,"type":"user"}
-{"last_load":1637936325560,"type":"file"}
+{"id":0,"time":1638287291869,"type":"user"}
+{"last_load":1638287292966,"type":"file"}
